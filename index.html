@@ -1358,24 +1358,24 @@
     </div>
   </div>
 
-  <!-- ── S22-B 반전: s22a 흑백 + 전체화면 빨간X ── -->
+  <!-- ── S22-B 반전: s22a 흑백 + 중앙 빨간X ── -->
   <div class="slide" id="s22b" data-script="근데 이건 이제 옛날 얘기예요. (X 표시 가리키며) 터미널 몰라도 돼요. 해결책이 있어요." style="padding:0;overflow:hidden;">
-    <!-- s22a 내용 그대로 + 흑백 필터 -->
+    <!-- s22a 완전 동일 내용 + 흑백 필터 -->
     <div style="position:absolute;inset:0;display:grid;grid-template-columns:1fr 1fr;filter:grayscale(1);">
       <div style="background:var(--surface2);border-right:1px solid var(--border);padding:56px 64px;display:flex;flex-direction:column;justify-content:center;">
-        <div class="eyebrow" style="display:inline-block;margin-bottom:12px;">솔직히 말하면</div>
+        <div class="eyebrow">솔직히 말하면</div>
         <h2 style="font-size:clamp(36px,5vw,68px);line-height:1.1;margin-bottom:24px;">
-          Claude Code는<br><span style="color:var(--orange);">터미널 기반</span>이에요
+          Claude Code는<br><span class="highlight">터미널 기반</span>이에요
         </h2>
-        <p style="font-size:clamp(16px,1.8vw,22px);line-height:1.8;color:var(--ink-dim);">
+        <p class="lead" style="font-size:clamp(16px,1.8vw,22px);line-height:1.8;color:var(--ink-dim);">
           명령줄 인터페이스(CLI)예요.<br>
           설치부터 실행까지<br>
           터미널을 벗어날 수 없어요.
         </p>
       </div>
       <div style="padding:48px 56px;display:flex;flex-direction:column;gap:18px;">
-        <div style="flex:1;background:#fff5f5;border:1px solid #fecaca;border-radius:16px;padding:28px 32px;display:flex;flex-direction:column;justify-content:center;min-height:0;">
-          <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--red);margin-bottom:10px;">비개발자한테는 진입 장벽</div>
+        <div class="card" style="flex:1;background:#fff5f5;border-color:#fecaca;padding:28px 32px;display:flex;flex-direction:column;justify-content:center;min-height:0;">
+          <div class="card-title" style="color:var(--red);">비개발자한테는 진입 장벽</div>
           <div style="background:var(--surface2);border-radius:8px;padding:14px 16px;font-family:monospace;font-size:clamp(12px,1.3vw,15px);color:var(--ink-dim);margin:12px 0;line-height:1.8;">
             npm install -g @anthropic-ai/claude-code<br>
             cd [내 프로젝트 폴더]<br>
@@ -1383,16 +1383,16 @@
           </div>
           <p style="font-size:clamp(14px,1.5vw,17px);line-height:1.7;">Node.js 설치, 경로 이동, 명령어 입력… 처음 보면 막막해요.</p>
         </div>
-        <div style="flex:1;background:#fff5f5;border:1px solid #fecaca;border-radius:16px;padding:28px 32px;display:flex;flex-direction:column;justify-content:center;min-height:0;">
-          <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--red);margin-bottom:10px;">익숙하지 않으면 멈추는 지점</div>
+        <div class="card" style="flex:1;background:#fff5f5;border-color:#fecaca;padding:28px 32px;display:flex;flex-direction:column;justify-content:center;min-height:0;">
+          <div class="card-title" style="color:var(--red);">익숙하지 않으면 멈추는 지점</div>
           <p style="font-size:clamp(14px,1.5vw,17px);line-height:1.75;">에러 메시지, 환경 변수, 권한 문제… 개발자가 아니라면 첫 실행부터 막혀요. 이게 초반 허들의 실체예요.</p>
         </div>
       </div>
     </div>
-    <!-- 중앙 20% 크기 빨간 X — 맨 위 레이어 -->
+    <!-- 중앙 20% 크기 빨간 X — 맨 위 레이어 (stroke-width 36→13) -->
     <svg style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:10;" viewBox="0 0 1600 900">
-      <line x1="640" y1="310" x2="960" y2="590" stroke="#b91c1c" stroke-width="36" stroke-linecap="round"/>
-      <line x1="960" y1="310" x2="640" y2="590" stroke="#b91c1c" stroke-width="36" stroke-linecap="round"/>
+      <line x1="640" y1="310" x2="960" y2="590" stroke="#b91c1c" stroke-width="13" stroke-linecap="round"/>
+      <line x1="960" y1="310" x2="640" y2="590" stroke="#b91c1c" stroke-width="13" stroke-linecap="round"/>
     </svg>
   </div>
 
