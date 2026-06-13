@@ -1099,7 +1099,7 @@
     background: var(--surface2);
   }
 
-  /* ── 챕터 간지 공통 — 라운지 채널 안내 ── */
+  /* 챕터 간지 공통 */
   .chapter-lounge {
     position: absolute;
     bottom: 28px;
@@ -1147,9 +1147,7 @@
 </head>
 <body>
 <div class="deck" id="deck" role="region" aria-label="프레젠테이션 슬라이드">
-<!-- ══════════════════════════════════════════════
-  S01 — 표지
-══════════════════════════════════════════════ -->
+
 <div class="slide active ai-center" id="s01" style="padding-bottom:24px;">
 <svg class="w-full pos-abs inset-0 h-full pe-none" aria-hidden="true" preserveAspectRatio="xMidYMid slice" style="opacity:0.06;" viewBox="0 0 1200 700">
 <circle cx="980" cy="120" fill="none" r="340" stroke="#c96500" stroke-width="2"></circle>
@@ -1200,13 +1198,7 @@
 </div>
 
 
-<!--
-  JD 카드 이미지 교체 가이드:
-  각 카드의 "<!- - IMG SLOT - ->" 자리에 다음을 끼워넣으세요:
-    <img class="jd-shot" src="jd-A.png" alt="A사 채용공고 캡처">
-  이미지를 넣어도 아래 텍스트는 그대로 fallback으로 남아 있어요.
-  필요 없으면 텍스트를 지우고 caption만 남겨도 됩니다.
--->
+
 <div class="slide p-0" id="s-jd">
 <div class="row stack ai-center jc-center pos-abs inset-0 slide-pad t-center">
 <div class="eyebrow anim">실제 채용공고에서</div>
@@ -1245,15 +1237,9 @@
 </div>
 
 
-<!-- ══════════════════════════════════════════════
-  S-HARD — 솔직한 고백: 어려운 게 맞아요
-══════════════════════════════════════════════ -->
-<!-- ══════════════════════════════════════════════
-  S05
-══════════════════════════════════════════════ -->
-<!-- ══════════════════════════════════════════════
-  S06 — 재프레이밍: 직접 만들기에서 위임·판단으로
-══════════════════════════════════════════════ -->
+
+
+
 <div class="slide" id="s-hard-reframe" style="padding:0;">
 <svg aria-hidden="true" preserveAspectRatio="xMidYMid slice" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;opacity:0.05;" viewBox="0 0 1200 700">
 <circle cx="600" cy="350" fill="none" r="300" stroke="#c96500" stroke-width="2"></circle>
@@ -1268,7 +1254,7 @@
 </h2>
 </div>
 <div class="anim" style="display:grid;grid-template-columns:1fr auto 1fr;gap:12px;align-items:stretch;">
-<!-- AsIs -->
+
 <div style="padding:28px 32px;border-radius:16px;background:var(--surface2);border:1px solid var(--border);display:flex;flex-direction:column;justify-content:center;gap:12px;">
 <div style="font-size:12px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-dimmer);">AsIs · 지금까지</div>
 <div style="display:flex;flex-direction:column;gap:6px;text-align:left;">
@@ -1278,9 +1264,9 @@
 <div style="font-size:clamp(14px,16px,17px);color:var(--ink-dimmer);line-height:1.6;">"어떻게" 만들 건가에 시간이 가장 많이 들어요</div>
 </div>
 </div>
-<!-- Arrow -->
+
 <div style="font-size:28px;font-weight:900;color:var(--orange);display:flex;align-items:center;justify-content:center;">→</div>
-<!-- ToBe -->
+
 <div style="padding:28px 32px;border-radius:16px;background:var(--surface);border:1px solid var(--border);border-left:4px solid var(--orange);display:flex;flex-direction:column;justify-content:center;gap:12px;">
 <div style="font-size:12px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--orange);">ToBe · 앞으로</div>
 <div style="display:flex;flex-direction:column;gap:6px;text-align:left;">
@@ -1336,12 +1322,8 @@
 </div>
 </div>
 </div>
-<!-- ══════════════════════════════════════════════
-  S08
-══════════════════════════════════════════════ -->
-<!-- ══════════════════════════════════════════════
-  S09
-══════════════════════════════════════════════ -->
+
+
 <div class="slide" id="s09" style="padding:0;">
 <svg aria-hidden="true" preserveAspectRatio="xMidYMid slice" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;opacity:0.05;" viewBox="0 0 1200 700">
 <circle cx="100" cy="600" fill="none" r="250" stroke="#c96500" stroke-width="2"></circle>
@@ -1377,9 +1359,7 @@
 </div>
 </div>
 </div>
-<!-- ══════════════════════════════════════════════
-  S-EXPERTISE
-══════════════════════════════════════════════ -->
+
 <div class="slide p-0" id="s-expertise">
 <svg class="w-full pos-abs inset-0 h-full pe-none" aria-hidden="true" preserveAspectRatio="xMidYMid slice" style="opacity:0.05;" viewBox="0 0 1200 700">
 <circle cx="600" cy="350" r="320" fill="none" stroke="#c96500" stroke-width="2" stroke-dasharray="8 6"/>
@@ -1423,24 +1403,20 @@ AI가 실행을 맡으면, 판단의 질이 곧 결과물의 질이에요.
 </div>
 </div>
 </div>
-<!-- ══════════════════════════════════════════════
-  S10
-══════════════════════════════════════════════ -->
-<!-- ══════════════════════════════════════════════
-  BEG-2 (이동) — 왜 Claude Code인가 (3-col 비교)
-══════════════════════════════════════════════ -->
+
+
 <div class="slide w-full row stack h-full ov-hidden" id="s-why-cc" style="padding: 36px 40px; gap: 10px; justify-content:center;">
 
-  <!-- 헤더 -->
+  
   <div class="t-center">
     <div class="fs-body-sm fw-700 fg-orange mb-4 t-upper ls-wide5">시작 전</div>
     <h2 class="fw-800 fg-ink kw m-0 ls-tight2" style="font-size:clamp(28px,36px,40px);">왜 Claude Code인가요?</h2>
   </div>
 
-  <!-- 3-column 비교 카드 + key-line (동일 그리드 2행) -->
+  
   <div class="ai-center grid grid-vs" style="gap:16px 16px; align-items:stretch;">
 
-    <!-- GPT 웹 (row 1, col 1) -->
+    
     <div class="bg-surface2 row stack g-12 bd r-16" style="padding:28px 32px;">
       <div class="fw-800 fg-ink ls-tight2 fs-title">GPT 웹</div>
       <div class="fs-body fw-600 fg-dim r-20 ib" style="background:#e8e5de; padding:3px 12px; width:fit-content;">대화만</div>
@@ -1452,12 +1428,12 @@ AI가 실행을 맡으면, 판단의 질이 곧 결과물의 질이에요.
       <div class="fg-dim kw r-10 fs-body italic mt-auto" style="background:#f0f0ee; padding:10px 14px;">"이렇게 하면 돼요~" 조언 친구</div>
     </div>
 
-    <!-- 중앙 VS (row 1, col 2) -->
+    
     <div class="row ai-center jc-center" style="padding:0 10px;">
       <div class="row ai-center jc-center fs-body-sm fw-800 fg-white r-full bg-orange ls-tight2" style="width:38px; height:38px;">VS</div>
     </div>
 
-    <!-- Claude Code (row 1, col 3) -->
+    
     <div class="bg-warn row stack g-12 r-16 pos-rel bd-2-orange" style="padding:28px 32px;">
       <div class="fg-white fs-body-sm fw-700 pos-abs bg-orange ls-wide1 pad-3-10" style="top:-1px; right:16px; border-radius:0 0 8px 8px;">추천</div>
       <div class="fw-800 fg-ink ls-tight2 fs-title">Claude Code</div>
@@ -1470,7 +1446,7 @@ AI가 실행을 맡으면, 판단의 질이 곧 결과물의 질이에요.
       <div class="fg-orange kw fw-600 r-10 fs-body italic mt-auto" style="background:rgba(201,101,0,0.1); padding:10px 14px;">"나 대신 실행까지 해 줄 수 있어요."</div>
     </div>
 
-    <!-- key-line (row 2, col 1~3 전체) -->
+    
     <div class="key-line t-center fs-body fw-700 kw r-12" style="padding:12px 24px; grid-column:1 / -1;">나 대신 실행까지 해 줄 수 있어요.</div>
 
   </div>
@@ -1478,9 +1454,7 @@ AI가 실행을 맡으면, 판단의 질이 곧 결과물의 질이에요.
 </div>
 
 
-<!-- ══════════════════════════════════════════════
-  S11
-══════════════════════════════════════════════ -->
+
 <div class="slide" id="s11" style="padding:0;">
 <svg aria-hidden="true" preserveAspectRatio="xMidYMid slice" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;opacity:0.06;" viewBox="0 0 1200 700">
 <circle cx="200" cy="600" fill="none" r="280" stroke="#c96500" stroke-width="2"></circle>
@@ -1701,9 +1675,7 @@ AI가 실행을 맡으면, 판단의 질이 곧 결과물의 질이에요.
 </div>
 
 
-<!-- ══════════════════════════════════════════════
-  S-EXPERTISE — 전문성은 오히려 더 중요해진다 (반전 카드)
-══════════════════════════════════════════════ -->
+
 
 <div class="slide p-0 ai-center" id="beg-0">
   <svg class="w-full pos-abs inset-0 h-full pe-none" aria-hidden="true" preserveAspectRatio="xMidYMid slice" style="opacity:0.12;" viewBox="0 0 1200 700">
@@ -1727,19 +1699,19 @@ AI가 실행을 맡으면, 판단의 질이 곧 결과물의 질이에요.
 
 <div class="slide w-full row stack h-full ov-hidden" id="beg-3" style="padding: 36px 40px; gap: 12px; justify-content:center;">
 
-  <!-- 헤더 -->
+  
   <div class="t-center">
     <div class="fs-body-sm fw-700 fg-orange mb-8 t-upper ls-wide5">A파트 01</div>
     <h2 class="fs-display fw-800 fg-ink kw m-0 ls-tight2">시작 3단계 (데스크탑 앱)</h2>
   </div>
 
-  <!-- 3단계 + 스타터킷 wrapper -->
+  
   <div class="row stack" style="gap:20px; align-self:center;">
 
-  <!-- 3단계 — 메인 (가로 3-col) -->
+  
   <div class="grid" style="grid-template-columns:1fr 1fr 1fr; gap:20px; align-items:stretch;">
 
-    <!-- Step 1 -->
+    
     <div class="row stack g-14 bd r-16 bg-surface" style="padding:28px 28px;">
       <div class="row ai-center g-12">
         <div class="row ai-center jc-center fw-800 fg-white r-full bg-orange flex-shrink-0" style="width:36px;height:36px;font-size:16px;">1</div>
@@ -1750,7 +1722,7 @@ AI가 실행을 맡으면, 판단의 질이 곧 결과물의 질이에요.
       <a href="https://claude.com/ko-kr/download" target="_blank" class="fs-body-sm fw-700 fg-orange kw r-8 pad-8-12 bg-surface2 bd" style="text-decoration:none; display:block; text-align:center;">다운로드 받으러가기 →</a>
     </div>
 
-    <!-- Step 2 -->
+    
     <div class="row stack g-14 bd r-16 bg-surface" style="padding:28px 28px;">
       <div class="row ai-center g-12">
         <div class="row ai-center jc-center fw-800 fg-white r-full bg-orange flex-shrink-0" style="width:36px;height:36px;font-size:16px;">2</div>
@@ -1758,10 +1730,10 @@ AI가 실행을 맡으면, 판단의 질이 곧 결과물의 질이에요.
       </div>
       <div class="fs-title fw-800 fg-ink kw ls-tight1"><span class="rd">████</span> 팀플랜<br/>계정으로 로그인</div>
       <div class="fs-body fg-dim kw lh-16">플랜 없다면 리드분과 상의 후<br/>기안 상신해 주세요</div>
-      <button type="button" class="fs-body-sm fw-700 fg-orange kw r-8 pad-8-12 bg-surface2 bd" style="text-align:center; cursor:pointer;" onclick="document.getElementById('codeBtnModal').classList.add('open')">앱에서 클로드코드 쓰기 →</button>
+      <button type="button" class="fs-body-sm fw-700 fg-orange kw r-8 pad-8-12 bg-surface2 bd" style="text-align:center; cursor:pointer;">앱에서 클로드코드 쓰기 →</button>
     </div>
 
-    <!-- Step 3 (강조) -->
+    
     <div class="row stack g-14 r-16 bg-warn bd-2-orange" style="padding:28px 28px;">
       <div class="row ai-center g-12">
         <div class="row ai-center jc-center fw-800 fg-white r-full bg-orange flex-shrink-0" style="width:36px;height:36px;font-size:16px;">3</div>
@@ -1774,7 +1746,7 @@ AI가 실행을 맡으면, 판단의 질이 곧 결과물의 질이에요.
 
   </div>
 
-  <!-- 캡션: 스타터킷 적용사항 -->
+  
   <div class="anim row stack g-10 bg-surface2 bd r-12" style="padding:14px 20px; box-sizing:border-box;">
     <div class="fs-body-sm fw-700 fg-orange t-upper ls-wide4">스타터킷 적용사항</div>
     <ul class="row stack g-4 m-0 pl-18 fs-body fg-dim kw lh-16">
@@ -1784,14 +1756,14 @@ AI가 실행을 맡으면, 판단의 질이 곧 결과물의 질이에요.
     </ul>
   </div>
 
-  </div><!-- /wrapper -->
+  </div>
 
-  <!-- 모달: 앱에서 코드 찾기 -->
+  
   <style>#codeBtnModal{display:none;} #codeBtnModal.open{display:flex !important;}</style>
-  <div id="codeBtnModal" onclick="if(event.target===this)this.classList.remove('open')" style="position:absolute; inset:0; background:transparent; align-items:center; justify-content:center; z-index:1000; cursor:zoom-out;">
-    <div style="position:relative; max-width:88%; max-height:88%;" onclick="event.stopPropagation()">
-      <button type="button" onclick="document.getElementById('codeBtnModal').classList.remove('open')" style="position:absolute; top:-44px; right:0; background:rgba(255,255,255,0.95); border:none; border-radius:99px; width:36px; height:36px; cursor:pointer; font-size:18px; color:#333; display:flex; align-items:center; justify-content:center;">✕</button>
-      <img src="code-button-location.png" onerror="this.style.display='none'" alt="앱에서 코드 버튼 위치" style="display:block; max-width:100%; max-height:88vh; border-radius:14px; box-shadow:0 12px 48px rgba(0,0,0,0.4);" />
+  <div id="codeBtnModal" style="position:absolute; inset:0; background:transparent; align-items:center; justify-content:center; z-index:1000; cursor:zoom-out;">
+    <div style="position:relative; max-width:88%; max-height:88%;">
+      <button type="button" style="position:absolute; top:-44px; right:0; background:rgba(255,255,255,0.95); border:none; border-radius:99px; width:36px; height:36px; cursor:pointer; font-size:18px; color:#333; display:flex; align-items:center; justify-content:center;">✕</button>
+      
     </div>
   </div>
 
@@ -1800,14 +1772,14 @@ AI가 실행을 맡으면, 판단의 질이 곧 결과물의 질이에요.
 
 <div class="slide w-full row stack h-full ov-hidden" id="beg-4" style="padding:32px 64px 28px; gap:1px; justify-content:flex-start;">
 
-  <!-- 타이틀 -->
+  
   <div class="t-center" style="margin-top:30px;">
     <div class="fs-body-sm fw-700 fg-orange mb-6 t-upper ls-wide5">A파트 02</div>
     <h2 class="fs-display fw-800 fg-ink kw m-0 ls-tight2">AI 사용법은 <span class="highlight">AI가 제일 잘알아요.</span></h2>
     <div class="fs-body fg-dim kw lh-16" style="margin-top:4px;">한쪽엔 LLM, 한쪽엔 클로드코드를 두고 AI의 답변이나 상황을 이미지로 찍어 질문해 보세요.<br/>AI가 상황에 딱 맞게, 친절하게 가이드해 줍니다.</div>
   </div>
 
-  <!-- 스크린샷 — 하단 그라데이션 마스크 -->
+  
   <div class="row ai-center jc-center flex-1" style="min-height:0; margin-top:1px; position:relative;">
     <div style="position:relative; max-width:100%; max-height:100%; border-radius:20px; overflow:hidden; box-shadow:0 8px 32px rgba(0,0,0,0.14); -webkit-mask-image:linear-gradient(to bottom, black 0%, black 95%, transparent 100%); mask-image:linear-gradient(to bottom, black 0%, black 95%, transparent 100%);">
       <img
@@ -1825,24 +1797,24 @@ AI가 실행을 맡으면, 판단의 질이 곧 결과물의 질이에요.
 <div class="slide w-full row stack h-full ov-hidden" id="beg-11"
   style="padding: 40px 40px; gap: 0; justify-content: center;">
 
-  <!-- 헤더 -->
+  
   <div class="t-center" style="margin-bottom:22px;">
     <div class="fs-body-sm fw-700 fg-orange mb-8 t-upper ls-wide5">A파트 03</div>
     <h2 class="fs-display fw-800 fg-ink kw m-0 ls-tight2">작은 반복업무 하나씩 위임해 보기</h2>
     <p class="fs-body fg-dim kw" style="margin:10px auto 0;">웹 LLM이 못 닿는 영역 — 내 컴퓨터·파일·코드에 직접 손이 가는 작업부터 시작해 보세요.</p>
   </div>
 
-  <!-- Before → After 테이블 -->
+  
   <div class="row stack" style="gap:10px; width:64%; align-self:center; margin-bottom:20px;">
 
-    <!-- 테이블 헤더 -->
+    
     <div class="grid ai-center" style="grid-template-columns:1fr 60px 1fr; gap:16px; margin-bottom:4px;">
       <div class="t-center fs-lead fw-700 fg-dim" style="letter-spacing:0.05em;">일상 반복 업무</div>
       <div></div>
       <div class="t-center fs-lead fw-800 fg-orange" style="letter-spacing:0.05em;">위임한다면</div>
     </div>
 
-    <!-- 행 1 -->
+    
     <div class="grid ai-center" style="grid-template-columns:1fr 60px 1fr; gap:16px; height:56px;">
       <div class="bg-surface2 t-center bd r-14 h-full row ai-center jc-center">
         <div class="fw-700 fg-ink kw" style="font-size:clamp(16px,19px,20px);">어지러운 폴더·파일 정리</div>
@@ -1853,7 +1825,7 @@ AI가 실행을 맡으면, 판단의 질이 곧 결과물의 질이에요.
       </div>
     </div>
 
-    <!-- 행 2 -->
+    
     <div class="grid ai-center" style="grid-template-columns:1fr 60px 1fr; gap:16px; height:56px;">
       <div class="bg-surface2 t-center bd r-14 h-full row ai-center jc-center">
         <div class="fw-700 fg-ink kw" style="font-size:clamp(16px,19px,20px);">시안 100개 일괄 변환</div>
@@ -1864,7 +1836,7 @@ AI가 실행을 맡으면, 판단의 질이 곧 결과물의 질이에요.
       </div>
     </div>
 
-    <!-- 행 3 -->
+    
     <div class="grid ai-center" style="grid-template-columns:1fr 60px 1fr; gap:16px; height:56px;">
       <div class="bg-surface2 t-center bd r-14 h-full row ai-center jc-center">
         <div class="fw-700 fg-ink kw" style="font-size:clamp(16px,19px,20px);">반복되는 PR·커밋 작업</div>
@@ -1877,7 +1849,7 @@ AI가 실행을 맡으면, 판단의 질이 곧 결과물의 질이에요.
 
   </div>
 
-  <!-- 빈칸 박스 -->
+  
   <div class="bg-surface2 t-center r-14" style="border: 2px dashed var(--border2); padding:20px 32px; width:64%; align-self:center;">
     <span class="fg-dim kw fs-lead">
       나는 매번 <span class="fg-orange fw-700 ib" style="border-bottom:2px solid var(--orange); min-width:160px; padding:0 6px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> 하는 게 귀찮다
@@ -1890,17 +1862,17 @@ AI가 실행을 맡으면, 판단의 질이 곧 결과물의 질이에요.
 <div class="slide w-full row stack h-full ov-hidden" id="beg-6"
   style="padding: 36px 56px; gap: 13px;">
 
-  <!-- 헤더 -->
+  
   <div class="t-center">
     <div class="fs-body-sm fw-700 fg-orange mb-6 t-upper ls-wide5">A파트 04</div>
     <h2 class="fw-800 fg-ink kw m-0 ls-tight2" style="font-size:clamp(28px,38px,44px);"><span class="highlight">클로드코드만 할 수 있는 일</span></h2>
     <div class="fs-body fg-dim mt-8 kw">웹 LLM은 못하는, 내 컴퓨터·폴더·시스템에 직접 손이 닿는 작업들을 할 수 있어요.</div>
   </div>
 
-  <!-- 2×2 카드 그리드 -->
+  
   <div class="grid grid-2" style="gap:14px; width:90%; align-self:center;">
 
-    <!-- 1. 폴더 통째 탐색 -->
+    
     <div class="bg-surface row stack g-10 bd r-14" style="padding:18px 22px;">
       <div class="row ai-center jc-between">
         <span class="fs-caption fw-700 fg-dimmer t-upper ls-wide4 r-20 pad-3-10 bg-surface2 bd">폴더 통째 읽기</span>
@@ -1910,7 +1882,7 @@ AI가 실행을 맡으면, 판단의 질이 곧 결과물의 질이에요.
       <div class="fs-body-sm fg-dim kw bd r-8 lh-15 italic pad-10-12 bg-surface2 mt-auto">"~/Documents/기획 폴더에 있는 .md 파일 전부 읽고, 중복되는 주장 3개 찾아줘. 각 파일명도 같이 표시"</div>
     </div>
 
-    <!-- 2. 실제 파일 생성·수정 -->
+    
     <div class="bg-surface row stack g-10 bd r-14" style="padding:18px 22px;">
       <div class="row ai-center jc-between">
         <span class="fs-caption fw-700 fg-dimmer t-upper ls-wide4 r-20 pad-3-10 bg-surface2 bd">파일 만들고 고치기</span>
@@ -1920,7 +1892,7 @@ AI가 실행을 맡으면, 판단의 질이 곧 결과물의 질이에요.
       <div class="fs-body-sm fg-dim kw bd r-8 lh-15 italic pad-10-12 bg-surface2 mt-auto">"~/Desktop/photos 안의 이미지 전부 1024px로 리사이즈해서 photos/resized/ 에 저장. 원본은 건들지 마"</div>
     </div>
 
-    <!-- 3. 명령어·스크립트 실행 -->
+    
     <div class="bg-surface row stack g-10 bd r-14" style="padding:18px 22px;">
       <div class="row ai-center jc-between">
         <span class="fs-caption fw-700 fg-dimmer t-upper ls-wide4 r-20 pad-3-10 bg-surface2 bd">명령어 직접 실행</span>
@@ -1930,7 +1902,7 @@ AI가 실행을 맡으면, 판단의 질이 곧 결과물의 질이에요.
       <div class="fs-body-sm fg-dim kw bd r-8 lh-15 italic pad-10-12 bg-surface2 mt-auto">"voc.csv 5천 줄을 카테고리별로 분류하는 파이썬 스크립트 짜고, 실행해서 결과를 chart.html로 만들어줘"</div>
     </div>
 
-    <!-- 4. 자동화·반복 작업 -->
+    
     <div class="bg-surface row stack g-10 bd-2-orange r-14" style="padding:18px 22px;">
       <div class="row ai-center jc-between">
         <span class="fs-caption fw-700 fg-orange t-upper ls-wide4 r-20 pad-3-10 bg-warn bd-orange">자동화 만들기</span>
@@ -1945,24 +1917,24 @@ AI가 실행을 맡으면, 판단의 질이 곧 결과물의 질이에요.
 </div>
 
 
-<!-- 토큰 최적화 슬라이드 (신규) -->
+
 <div class="slide w-full row stack h-full ov-hidden" id="beg-token"
   style="padding: 36px 40px; gap: 14px; justify-content:center;">
 
-  <!-- 헤더 -->
+  
   <div class="t-center">
     <div class="fs-body-sm fw-700 fg-orange mb-8 t-upper ls-wide5">A파트 05</div>
     <h2 class="fs-display fw-800 fg-ink kw m-0 ls-tight2">이쯤 됐으면 슬슬 <span class="highlight">토큰 최적화</span>가 필요할 거예요</h2>
     <p class="fs-body fg-dim kw mt-8" style="margin:8px auto 0;">반복하다 보면 한 번에 쓰는 토큰이 늘어나요. 작업 길이·비용·속도가 동시에 좋아지는 4가지 액션</p>
   </div>
 
-  <!-- 카드 + key-line wrapper -->
+  
   <div class="row stack" style="gap:14px; align-self:center; width:80%;">
 
-  <!-- 4개 액션 카드 (2x2 그리드) -->
+  
   <div class="grid grid-2 anim" style="gap:14px; align-items:stretch;">
 
-    <!-- 액션 1 -->
+    
     <div class="row stack g-6 bd r-14" style="padding:14px 18px; background:rgba(255,255,255,0.6);">
       <div class="row ai-center g-10">
         <div class="row ai-center jc-center fw-800 fg-white r-full bg-orange flex-shrink-0" style="width:26px;height:26px;font-size:13px;">1</div>
@@ -1972,7 +1944,7 @@ AI가 실행을 맡으면, 판단의 질이 곧 결과물의 질이에요.
       <div class="fs-body-sm fw-700 fg-orange kw bg-warn r-8" style="padding:5px 10px; margin-top:auto; width:fit-content;">/clear · /compact 활용</div>
     </div>
 
-    <!-- 액션 2 -->
+    
     <div class="row stack g-6 bd r-14" style="padding:14px 18px; background:rgba(255,255,255,0.6);">
       <div class="row ai-center g-10">
         <div class="row ai-center jc-center fw-800 fg-white r-full bg-orange flex-shrink-0" style="width:26px;height:26px;font-size:13px;">2</div>
@@ -1982,7 +1954,7 @@ AI가 실행을 맡으면, 판단의 질이 곧 결과물의 질이에요.
       <div class="fs-body-sm fw-700 fg-orange kw bg-warn r-8" style="padding:5px 10px; margin-top:auto; width:fit-content;">파일 경로 명시</div>
     </div>
 
-    <!-- 액션 3 -->
+    
     <div class="row stack g-6 bd r-14" style="padding:14px 18px; background:rgba(255,255,255,0.6);">
       <div class="row ai-center g-10">
         <div class="row ai-center jc-center fw-800 fg-white r-full bg-orange flex-shrink-0" style="width:26px;height:26px;font-size:13px;">3</div>
@@ -1992,7 +1964,7 @@ AI가 실행을 맡으면, 판단의 질이 곧 결과물의 질이에요.
       <div class="fs-body-sm fw-700 fg-orange kw bg-warn r-8" style="padding:5px 10px; margin-top:auto; width:fit-content;">규칙·용어·금지사항</div>
     </div>
 
-    <!-- 액션 4 -->
+    
     <div class="row stack g-6 bd-2-orange r-14 bg-warn" style="padding:14px 18px;">
       <div class="row ai-center g-10">
         <div class="row ai-center jc-center fw-800 fg-white r-full bg-orange flex-shrink-0" style="width:26px;height:26px;font-size:13px;">4</div>
@@ -2004,34 +1976,34 @@ AI가 실행을 맡으면, 판단의 질이 곧 결과물의 질이에요.
 
   </div>
 
-  <!-- key-line: 스타터킷 안내 -->
+  
   <div class="key-line t-center fs-body fw-700 kw r-12" style="padding:12px 24px; box-sizing:border-box;">
     <a target="_blank" class="fg-orange fw-800" style="text-decoration:underline;">스타터킷</a>에는 ②·③ 규칙이 이미 CLAUDE.md에 들어 있어요
   </div>
 
-  </div><!-- /wrapper -->
+  </div>
 
 </div>
 
 
-<!-- beg-7: 에러 대처 + 바로 쓰는 프롬프트 (A파트 06) -->
+
 <div class="slide w-full ai-center jc-center h-full ov-hidden" id="beg-7" style="padding:0;">
 <div class="row stack" style="width:1280px; height:720px; padding:36px 56px; gap:16px; justify-content:center; transform:scale(0.9); transform-origin:center center;">
 
-  <!-- 헤더 -->
+  
   <div class="t-center">
     <div class="fs-body-sm fw-700 fg-orange mb-6 t-upper ls-wide5">A파트 06</div>
     <h2 class="fw-800 fg-ink kw m-0 ls-tight2" style="font-size:clamp(24px,30px,34px);">에러 대처 · 바로 쓰는 프롬프트</h2>
   </div>
 
-  <!-- 메인 2컬럼 -->
+  
   <div class="grid" style="grid-template-columns:1fr 1fr; gap:22px; flex:1; min-height:0; align-items:stretch;">
 
-    <!-- 왼쪽: 에러가 났을 때 -->
+    
     <div class="row stack" style="gap:10px;">
       <span class="fs-body-sm fw-700 fg-dim kw ls-wide2 t-center t-upper">에러가 났을 때</span>
 
-      <!-- 에러 3개 카드 (= 프롬프트 위 5개와 동일한 분배) -->
+      
       <div class="row stack" style="gap:8px; flex:1;">
 
         <div class="bg-surface row stack r-12" style="padding:11px 16px; gap:4px; border:2px solid var(--bad-br); flex:1;">
@@ -2058,7 +2030,7 @@ AI가 실행을 맡으면, 판단의 질이 곧 결과물의 질이에요.
           <div class="fs-body-sm fw-700 fg-orange kw" style="margin-top:auto;">→ "되돌려줘" 후 경로 명확히 지정</div>
         </div>
 
-        <!-- 핵심 원칙 -->
+        
         <div class="bg-warn row stack bd-2-orange r-12" style="padding:11px 16px; gap:4px; flex:1;">
           <div class="fw-800 fg-orange kw fs-body lh-155">에러 메시지를 그대로 붙여넣기</div>
           <div class="fs-body-sm fg-orange kw" style="margin-top:auto; opacity:0.9;">AI에게 그대로 보여주면 원인·해결을 알려줘요</div>
@@ -2067,7 +2039,7 @@ AI가 실행을 맡으면, 판단의 질이 곧 결과물의 질이에요.
       </div>
     </div>
 
-    <!-- 오른쪽: 프롬프트 예시 — 6개 -->
+    
     <div class="row stack" style="gap:10px;">
       <span class="fs-body-sm fw-700 fg-dim kw ls-wide2 t-center t-upper">프롬프트 예시</span>
 
@@ -2108,7 +2080,7 @@ AI가 실행을 맡으면, 판단의 질이 곧 결과물의 질이에요.
 
   </div>
 
-</div><!-- /scaled wrapper -->
+</div>
 
 </div>
 
@@ -2118,17 +2090,17 @@ AI가 실행을 맡으면, 판단의 질이 곧 결과물의 질이에요.
 <div class="slide w-full row stack h-full ov-hidden" id="beg-1"
   style="padding: 28px 40px; gap: 14px; justify-content: center;">
 
-  <!-- 헤더 -->
+  
   <div class="t-center">
     <div class="fs-body-sm fw-700 fg-orange mb-6 t-upper ls-wide5">A파트 마무리</div>
     <h2 class="fs-display fw-800 fg-ink kw m-0 ls-tight2">마무리 — <span class="highlight">보안 체크</span></h2>
     <p class="fs-body fg-dim kw" style="margin:6px 0 0;">딱 한 번만 확인하고 시작하세요</p>
   </div>
 
-  <!-- 보안 카드 6개 (3x2 그리드) -->
+  
   <div class="grid grid-3" style="gap:10px; min-height:0; align-items:stretch; width:80%; align-self:center;">
 
-    <!-- 절대 입력 금지 -->
+    
     <div class="row stack g-4 bd-bad r-12 bg-bad-soft" style="padding:12px 14px;">
       <div class="fs-tiny fw-700 fg-bad t-upper ls-wide4">절대 입력 금지</div>
       <div class="fs-body fw-800 fg-bad kw ls-tight1">사내 기밀 데이터</div>
@@ -2136,7 +2108,7 @@ AI가 실행을 맡으면, 판단의 질이 곧 결과물의 질이에요.
       <div class="fs-caption fg-bad fw-700 kw bd-bad r-8" style="padding:5px 8px; background:white; margin-top:auto;">→ 더미 데이터로 먼저 검증</div>
     </div>
 
-    <!-- API 키 -->
+    
     <div class="row stack g-4 bd-bad r-12 bg-bad-soft" style="padding:12px 14px;">
       <div class="fs-tiny fw-700 fg-bad t-upper ls-wide4">절대 입력 금지</div>
       <div class="fs-body fw-800 fg-bad kw ls-tight1">API 키 · 토큰 · 비밀번호</div>
@@ -2144,7 +2116,7 @@ AI가 실행을 맡으면, 판단의 질이 곧 결과물의 질이에요.
       <div class="fs-caption fg-bad fw-700 kw bd-bad r-8" style="padding:5px 8px; background:white; margin-top:auto;">→ .env 파일·비밀 매니저 사용</div>
     </div>
 
-    <!-- 회사 정책 -->
+    
     <div class="row stack g-4 bd-bad r-12 bg-bad-soft" style="padding:12px 14px;">
       <div class="fs-tiny fw-700 fg-bad t-upper ls-wide4">먼저 확인</div>
       <div class="fs-body fw-800 fg-bad kw ls-tight1">회사 AI 사용 정책</div>
@@ -2152,7 +2124,7 @@ AI가 실행을 맡으면, 판단의 질이 곧 결과물의 질이에요.
       <div class="fs-caption fg-bad fw-700 kw bd-bad r-8" style="padding:5px 8px; background:white; margin-top:auto;">→ 정책 없으면 보안팀에 먼저</div>
     </div>
 
-    <!-- 권한 범위 -->
+    
     <div class="bg-surface2 row stack g-4 bd r-12" style="padding:12px 14px;">
       <div class="fs-tiny fw-700 fg-dimmer t-upper ls-wide4">최소 권한</div>
       <div class="fs-body fw-800 fg-ink kw ls-tight1">필요한 폴더만 허용</div>
@@ -2160,7 +2132,7 @@ AI가 실행을 맡으면, 판단의 질이 곧 결과물의 질이에요.
       <div class="bg-warn fs-caption fg-orange fw-700 kw r-8" style="padding:5px 8px; margin-top:auto;">→ ~/Documents 전체 X · 작업 폴더만 O</div>
     </div>
 
-    <!-- 작업 전 백업 -->
+    
     <div class="bg-surface2 row stack g-4 bd r-12" style="padding:12px 14px;">
       <div class="fs-tiny fw-700 fg-dimmer t-upper ls-wide4">실수 대비</div>
       <div class="fs-body fw-800 fg-ink kw ls-tight1">작업 전 백업·Git 커밋</div>
@@ -2168,7 +2140,7 @@ AI가 실행을 맡으면, 판단의 질이 곧 결과물의 질이에요.
       <div class="bg-warn fs-caption fg-orange fw-700 kw r-8" style="padding:5px 8px; margin-top:auto;">→ git commit · 폴더 복사 백업</div>
     </div>
 
-    <!-- 안전하게 시작 (강조) -->
+    
     <div class="row stack g-4 bd-2-orange r-12 bg-warn" style="padding:12px 14px;">
       <div class="fs-tiny fw-700 fg-orange t-upper ls-wide4">안전하게 시작</div>
       <div class="fs-body fw-800 fg-ink kw ls-tight1">처음엔 연습 폴더에서만</div>
@@ -2178,7 +2150,7 @@ AI가 실행을 맡으면, 판단의 질이 곧 결과물의 질이에요.
 
   </div>
 
-  <!-- key-line -->
+  
   <div class="key-line t-center fs-body fw-700 kw r-12" style="padding:10px 20px; width:80%; align-self:center;">
     보안은 항상 신경쓰고 <span class="fg-orange">검증하셔야 합니다</span>
   </div>
@@ -2231,16 +2203,16 @@ AI가 실행을 맡으면, 판단의 질이 곧 결과물의 질이에요.
 <div class="slide ai-center slide-pad" id="mid-1">
 
   <div class="w-full" style="max-width:980px;">
-    <!-- 제목 -->
+    
     <div class="anim t-center" style="margin-bottom:36px;">
       <div class="eyebrow">개념 관계 한눈에</div>
       <h2 class="fs-display">이 5가지가 <span class="highlight">B파트의 전부</span>예요</h2>
     </div>
 
-    <!-- 다이어그램 — 좌3 · 허브 · 우2 -->
+    
     <div class="anim ai-center grid" style="grid-template-columns:1fr 180px 1fr; gap:0;">
 
-      <!-- 좌측 3개 -->
+      
       <div class="row stack g-12" style="align-items:flex-end;">
 
         <div class="row ai-center g-0">
@@ -2278,7 +2250,7 @@ AI가 실행을 맡으면, 판단의 질이 곧 결과물의 질이에요.
 
       </div>
 
-      <!-- 중앙 허브 -->
+      
       <div class="bg-warn row stack ai-center jc-center t-center r-full" style="width:220px; height:220px; border:2px solid var(--orange-br); box-shadow:0 6px 28px rgba(201,101,0,0.10); justify-self:center; flex-shrink:0; gap:6px;">
         <svg viewBox="0 0 18 13" width="52" height="38" aria-hidden="true" shape-rendering="crispEdges">
           <g fill="var(--orange)"><rect x="2" y="0" width="14" height="3"/><rect x="0" y="3" width="18" height="6"/><rect x="2" y="9" width="14" height="1"/><rect x="2" y="10" width="2" height="3"/><rect x="6" y="10" width="2" height="3"/><rect x="10" y="10" width="2" height="3"/><rect x="14" y="10" width="2" height="3"/></g>
@@ -2287,7 +2259,7 @@ AI가 실행을 맡으면, 판단의 질이 곧 결과물의 질이에요.
         <div class="fg-orange fw-900 ls-tight1" style="font-size:22px; line-height:1.1;">Claude Code</div>
       </div>
 
-      <!-- 우측 2개 -->
+      
       <div class="row stack g-12 ai-start" style="justify-content:center;">
 
         <div class="row ai-center g-0">
@@ -2329,7 +2301,7 @@ AI가 실행을 맡으면, 판단의 질이 곧 결과물의 질이에요.
     </div>
     <div class="two-col anim ai-stretch" style="gap:24px; grid-template-columns:1fr 1fr;">
 
-      <!-- 좌: 개념 -->
+      
       <div class="row stack g-8">
         <div class="fs-tiny fg-dimmer fw-700 ls-wide4 t-upper mb-2 t-center">개념</div>
         <div class="card flex-1" style="display:flex; flex-direction:column;">
@@ -2345,7 +2317,7 @@ AI가 실행을 맡으면, 판단의 질이 곧 결과물의 질이에요.
         </div>
       </div>
 
-      <!-- 우: 예시 카드 -->
+      
       <div class="row stack g-8">
         <div class="fs-tiny fg-dimmer fw-700 ls-wide4 t-upper mb-2 t-center">이런 내용을 넣어요</div>
         <div class="row stack g-8 flex-1">
@@ -2385,7 +2357,7 @@ AI가 실행을 맡으면, 판단의 질이 곧 결과물의 질이에요.
     </div>
     <div class="two-col anim ai-stretch" style="gap:24px; grid-template-columns:1fr 1fr;">
 
-      <!-- 좌: 개념 -->
+      
       <div class="row stack g-8">
         <div class="fs-tiny fg-dimmer fw-700 ls-wide4 t-upper mb-2 t-center">왜 필요한가요?</div>
         <div class="card flex-1" style="display:flex; flex-direction:column;">
@@ -2398,7 +2370,7 @@ AI가 실행을 맡으면, 판단의 질이 곧 결과물의 질이에요.
         </div>
       </div>
 
-      <!-- 우: 메모리 파일 카드 -->
+      
       <div class="row stack g-8">
         <div class="fs-tiny fg-dimmer fw-700 ls-wide4 t-upper mb-2 t-center">파일별 역할</div>
         <div class="row stack g-8 flex-1">
@@ -2446,7 +2418,7 @@ AI가 실행을 맡으면, 판단의 질이 곧 결과물의 질이에요.
     </div>
     <div class="two-col anim ai-stretch" style="gap:24px; grid-template-columns:1fr 1fr;">
 
-      <!-- 좌: 개념 -->
+      
       <div class="row stack g-8">
         <div class="fs-tiny fg-dimmer fw-700 ls-wide4 t-upper mb-2 t-center">어떻게 작동하나요?</div>
         <div class="card flex-1" style="display:flex; flex-direction:column;">
@@ -2459,7 +2431,7 @@ AI가 실행을 맡으면, 판단의 질이 곧 결과물의 질이에요.
         </div>
       </div>
 
-      <!-- 우: 실제 예시 -->
+      
       <div class="row stack g-8">
         <div class="fs-tiny fg-dimmer fw-700 ls-wide4 t-upper mb-2 t-center">실전 예시</div>
         <div class="row stack g-8 flex-1">
@@ -2501,7 +2473,7 @@ AI가 실행을 맡으면, 판단의 질이 곧 결과물의 질이에요.
 
     <div class="cols-3 anim g-16">
 
-      <!-- PreToolUse -->
+      
       <div class="row stack g-8">
         <div class="fs-tiny fg-dimmer fw-700 ls-wide4 t-upper t-center">실행 전 훅</div>
         <div class="card flex-1" style="border-top:3px solid #7e22ce;">
@@ -2513,7 +2485,7 @@ AI가 실행을 맡으면, 판단의 질이 곧 결과물의 질이에요.
         </div>
       </div>
 
-      <!-- PostToolUse -->
+      
       <div class="row stack g-8">
         <div class="fs-tiny fg-dimmer fw-700 ls-wide4 t-upper t-center">실행 후 훅</div>
         <div class="card flex-1" style="border-top:3px solid #1d4ed8;">
@@ -2525,7 +2497,7 @@ AI가 실행을 맡으면, 판단의 질이 곧 결과물의 질이에요.
         </div>
       </div>
 
-      <!-- Stop -->
+      
       <div class="row stack g-8">
         <div class="fs-tiny fg-dimmer fw-700 ls-wide4 t-upper t-center fg-orange">종료 훅</div>
         <div class="card flex-1" style="border-top:3px solid var(--orange);">
@@ -2552,7 +2524,7 @@ AI가 실행을 맡으면, 판단의 질이 곧 결과물의 질이에요.
     </div>
     <div class="two-col anim ai-stretch" style="gap:24px; grid-template-columns:1fr 1fr;">
 
-      <!-- 좌: 개념 -->
+      
       <div class="row stack g-8">
         <div class="fs-tiny fg-dimmer fw-700 ls-wide4 t-upper mb-2 t-center">개념</div>
         <div class="card flex-1" style="display:flex; flex-direction:column;">
@@ -2565,7 +2537,7 @@ AI가 실행을 맡으면, 판단의 질이 곧 결과물의 질이에요.
         </div>
       </div>
 
-      <!-- 우: 실전 예시 -->
+      
       <div class="row stack g-8">
         <div class="fs-tiny fg-dimmer fw-700 ls-wide4 t-upper mb-2 t-center">실전 예시</div>
         <div class="row stack g-8 flex-1">
@@ -2605,7 +2577,7 @@ AI가 실행을 맡으면, 판단의 질이 곧 결과물의 질이에요.
     </div>
     <div class="two-col anim ai-stretch" style="gap:24px; grid-template-columns:1fr 1fr;">
 
-      <!-- 좌: 구조 이해 -->
+      
       <div class="row stack g-8">
         <div class="fs-tiny fg-dimmer fw-700 ls-wide4 t-upper mb-2 t-center">구조 이해</div>
         <div class="card flex-1" style="display:flex; flex-direction:column;">
@@ -2618,7 +2590,7 @@ AI가 실행을 맡으면, 판단의 질이 곧 결과물의 질이에요.
         </div>
       </div>
 
-      <!-- 우: 절약 팁 -->
+      
       <div class="row stack g-8">
         <div class="fs-tiny fg-dimmer fw-700 ls-wide4 t-upper mb-2 t-center">절약 팁</div>
         <div class="card flex-1 row stack g-8" style="padding:14px 18px;">
@@ -2658,7 +2630,7 @@ AI가 실행을 맡으면, 판단의 질이 곧 결과물의 질이에요.
 
     </div>
 
-    <!-- 하단: 모델별 용도 구분 -->
+    
     <div class="anim mt-16 card bg-surface2" style="padding:14px 18px;">
       <div class="card-title">모델별 용도 구분</div>
       <div class="row g-16 ai-center flex-wrap mt-4">
@@ -2687,7 +2659,7 @@ AI가 실행을 맡으면, 판단의 질이 곧 결과물의 질이에요.
     </div>
     <div class="two-col anim ai-stretch" style="gap:24px; grid-template-columns:1fr 1fr;">
 
-      <!-- 좌: 설명 -->
+      
       <div class="row stack g-8">
         <div class="fs-tiny fg-dimmer fw-700 ls-wide4 t-upper mb-2 t-center">파이프라인이란?</div>
         <div class="card flex-1" style="display:flex; flex-direction:column;">
@@ -2700,7 +2672,7 @@ AI가 실행을 맡으면, 판단의 질이 곧 결과물의 질이에요.
         </div>
       </div>
 
-      <!-- 우: 실전 예시 -->
+      
       <div class="row stack g-8">
         <div class="fs-tiny fg-dimmer fw-700 ls-wide4 t-upper mb-2 t-center">실전 예시</div>
         <div class="row stack g-8 flex-1">
@@ -2761,10 +2733,10 @@ AI가 실행을 맡으면, 판단의 질이 곧 결과물의 질이에요.
       <p class="fs-body-sm fg-dim kw" style="margin:10px auto 0; max-width:720px;">바로 실행시키면 방향이 틀려도 되돌리기 어려워요. Plan 단계에서 방향을 먼저 잡으면 나중에 손해가 줄어요.</p>
     </div>
 
-    <!-- 3단계 흐름 -->
+    
     <div class="anim ai-stretch grid" style="grid-template-columns:1fr 24px 1fr 24px 1fr; gap:0; width:90%; align-self:center; margin:0 auto 16px;">
 
-      <!-- Explore -->
+      
       <div class="bg-surface t-center row stack ai-stretch g-10 r-14" style="border:2px solid var(--border); padding:24px 22px;">
         <div class="fs-tiny fg-dimmer fw-700 ls-wide4 t-upper">1단계</div>
         <div class="fs-lead fg-ink ls-tight2 fw-900">전체 파악</div>
@@ -2772,12 +2744,12 @@ AI가 실행을 맡으면, 판단의 질이 곧 결과물의 질이에요.
         <div class="fs-body-sm fg-orange fw-600 ff-mono bg-surface2 r-6 bd t-center" style="padding:8px 14px;">"이 폴더 구조 파악해줘"</div>
       </div>
 
-      <!-- 화살표 -->
+      
       <div class="row ai-center jc-center">
         <div style="width:0; height:0; border-top:8px solid transparent; border-bottom:8px solid transparent; border-left:12px solid var(--orange-br);"></div>
       </div>
 
-      <!-- Plan -->
+      
       <div class="bg-warn t-center row stack ai-stretch g-10 r-14 bd-2-orange" style="padding:24px 22px;">
         <div class="fs-tiny fg-orange fw-700 ls-wide4 t-upper">2단계 · 핵심</div>
         <div class="fs-lead fg-orange ls-tight2 fw-900">Plan</div>
@@ -2785,12 +2757,12 @@ AI가 실행을 맡으면, 판단의 질이 곧 결과물의 질이에요.
         <div class="fs-body-sm fg-orange fw-600 ff-mono r-6 bd-orange t-center" style="background:rgba(255,255,255,0.7); padding:8px 14px;">"어떻게 할지 보여줘"</div>
       </div>
 
-      <!-- 화살표 -->
+      
       <div class="row ai-center jc-center">
         <div style="width:0; height:0; border-top:8px solid transparent; border-bottom:8px solid transparent; border-left:12px solid var(--orange-br);"></div>
       </div>
 
-      <!-- Implement -->
+      
       <div class="bg-surface t-center row stack ai-stretch g-10 r-14" style="border:2px solid var(--border); padding:24px 22px;">
         <div class="fs-tiny fg-dimmer fw-700 ls-wide4 t-upper">3단계</div>
         <div class="fs-lead fg-ink ls-tight2 fw-900">Implement</div>
@@ -2800,7 +2772,7 @@ AI가 실행을 맡으면, 판단의 질이 곧 결과물의 질이에요.
 
     </div>
 
-    <!-- 하단 2 카드 -->
+    
     <div class="anim grid grid-2" style="gap:16px; width:90%; align-self:center; margin:0 auto;">
       <div class="card bg-surface2 row stack g-4">
         <div class="card-title">왜 중요한가</div>
@@ -2825,7 +2797,7 @@ AI가 실행을 맡으면, 판단의 질이 곧 결과물의 질이에요.
     </div>
     <div class="two-col anim ai-stretch" style="gap:24px; grid-template-columns:1fr 1fr;">
 
-      <!-- 좌: 개념 -->
+      
       <div class="row stack g-8">
         <div class="fs-tiny fg-dimmer fw-700 ls-wide4 t-upper mb-2 t-center">개념</div>
         <div class="card flex-1" style="display:flex; flex-direction:column;">
@@ -2838,7 +2810,7 @@ AI가 실행을 맡으면, 판단의 질이 곧 결과물의 질이에요.
         </div>
       </div>
 
-      <!-- 우: 실천 루틴 -->
+      
       <div class="row stack g-8">
         <div class="fs-tiny fg-dimmer fw-700 ls-wide4 t-upper mb-2 t-center">실천 루틴</div>
         <div class="row stack g-8 flex-1">
@@ -2879,14 +2851,14 @@ AI가 실행을 맡으면, 판단의 질이 곧 결과물의 질이에요.
 
 <div class="slide w-full row stack h-full ov-hidden" id="mid-11" style="padding: 36px 40px; gap:20px; justify-content:center;">
 
-  <!-- 헤더 -->
+  
   <div class="t-center anim">
     <div class="fs-body-sm fw-700 fg-orange mb-8 t-upper ls-wide5">B파트 마무리</div>
     <h2 class="fs-display fw-800 fg-ink kw m-0 ls-tight2">B파트 <span class="highlight">체크리스트</span></h2>
     <p class="fs-body fg-dim kw mt-8" style="margin:8px 0 0;">이걸 다 쓰는 사람은 많지 않아요 — 오늘 1개만 추가가 목표예요</p>
   </div>
 
-  <!-- 체크리스트 (라인 형태, 카드 없이) -->
+  
   <ul class="anim row stack m-0" style="gap:8px; width:50%; align-self:center; padding:0; list-style:none;">
 
     <li class="row ai-center g-14" style="padding:8px 0; border-bottom:1px solid var(--border);">
@@ -2940,7 +2912,7 @@ AI가 실행을 맡으면, 판단의 질이 곧 결과물의 질이에요.
 
   </ul>
 
-  <!-- key-line -->
+  
   <div class="key-line t-center fs-body fw-700 kw r-12 anim" style="padding:12px 24px; width:50%; align-self:center;">
     이걸 <span class="fg-orange">다 안 해도 돼요</span> — 오늘 <span class="fg-orange">1개만 추가</span>하는 게 목표예요
   </div>
@@ -2948,7 +2920,7 @@ AI가 실행을 맡으면, 판단의 질이 곧 결과물의 질이에요.
 </div>
 
 
-<!-- 실전 팁 간지 -->
+
 <div class="slide p-0 ai-center" id="s-tip-divider">
 <svg class="w-full pos-abs inset-0 h-full pe-none" aria-hidden="true" preserveAspectRatio="xMidYMid slice" style="opacity:0.12;" viewBox="0 0 1200 700">
 <circle cx="600" cy="350" fill="none" r="320" stroke="#c96500" stroke-dasharray="10 7" stroke-width="2.5"></circle>
@@ -3418,7 +3390,7 @@ AI가 실행을 맡으면, 판단의 질이 곧 결과물의 질이에요.
 <circle cx="180" cy="600" fill="none" r="200" stroke="#c96500" stroke-dasharray="10 7" stroke-width="1.5"></circle>
 </svg>
 <div class="pos-abs inset-0 grid grid-2">
-<!-- 좌: 핵심 메시지 -->
+
 <div class="row stack jc-center g-20" style="padding:64px 72px;">
 <div class="eyebrow anim">오늘의 인사이트</div>
 <h2 class="anim fw-800 ls-tight3 lh-12" style="font-size:clamp(30px,51px,56px);">
@@ -3430,7 +3402,7 @@ AI가 실행을 맡으면, 판단의 질이 곧 결과물의 질이에요.
 </div>
 <p class="lead anim fg-dim lh-16 fs-lead">도구가 바뀐 게 아니에요.<br/>같은 판단으로 낼 수 있는 결과가 달라진 거예요.</p>
 </div>
-<!-- 우: 카드 3개 -->
+
 <div class="row stack g-14 jc-center" style="padding:44px 64px;">
 <div class="card anim">
 <div class="card-title">여러분은 이미 하고 있어요</div>
@@ -3493,12 +3465,12 @@ AI가 실행을 맡으면, 판단의 질이 곧 결과물의 질이에요.
 </div>
 
 
-<!-- 스크립트 힌트 오버레이 — deck 내부 absolute -->
+
 <div class="script-overlay" id="scriptOverlay" role="complementary" aria-label="강연 스크립트 힌트">
 <div class="s-label">SCRIPT HINT — Ctrl+S 키로 토글</div>
 <div id="scriptText"></div>
 </div>
-</div><!-- /deck -->
+</div>
 <div class="slide-num" id="slideNum">1 / —</div>
 <script>
   const deck = document.getElementById('deck');
