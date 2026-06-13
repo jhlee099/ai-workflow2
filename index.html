@@ -131,6 +131,8 @@
   .em    { color: var(--orange); font-weight: 600; }
   .dim   { color: var(--ink-dim); }
   .dimmer{ color: var(--ink-dimmer); }
+  /* 비공개(사내) 정보 가림 — 블러 처리 */
+  .rd { display:inline-block; filter: blur(6px); opacity:0.8; user-select:none; pointer-events:none; letter-spacing:0.04em; }
 
   /* ── 구분선 ── */
   .rule {
@@ -518,7 +520,7 @@
   S01 — 표지
 ══════════════════════════════════════════════ -->
 <div class="slide active" id="s01"
-  data-script="안녕하세요, 반갑습니다. 잠깐 들어오면서 슬라이드 보셨죠? 오늘 주제가 AI로 일하는 방식이에요. 근데 이게 어떻게 바뀌는지, 그냥 말로만 하는 자리가 아니에요. 오늘은 직접 보여드릴 거예요. 무거운 강의보다 같이 생각해보는 자리예요."
+
   style="align-items:center;padding-bottom:24px;">
   <svg style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;opacity:0.06;" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice">
     <circle cx="980" cy="120" r="340" fill="none" stroke="#c96500" stroke-width="2"/>
@@ -547,7 +549,7 @@
   S02 — 상상 유도: 15년차 면접관
 ══════════════════════════════════════════════ -->
 <div class="slide" id="s02"
-  data-script="자 한 번 상상을 해볼게요. 여러분들이 10년차 프디라고 가정을 해봅시다. 어마어마한 경력의 소유자죠? 근데 이력서 봤더니 엄청 잘 쓰여있고 포폴 클릭해봤더니 굉장히 깔끔하고 좋더라고요. 인터뷰 들어오니까 말도 잘하고 딱 봤을 때 합격이다 싶어요."
+
   style="padding:0;">
   <svg style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;opacity:0.04;" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice">
     <circle cx="200" cy="200" r="260" fill="none" stroke="#c96500" stroke-width="2" stroke-dasharray="12 8"/>
@@ -583,7 +585,7 @@
   S03 — 반전: "포토샵으로 만들었어요"
 ══════════════════════════════════════════════ -->
 <div class="slide" id="s03"
-  data-script="그래서 마지막 질문 하나 했어요. 포트폴리오 뭐로 만드셨어요? 포토샵으로 만들었답니다. 엥? 그게 뭔 말이야 하면서 혹시 피그마 써보신 적 있으세요? 라고 물어봤더니 아 피그마를 써볼 기회가 없었어요. 라고 하네요. 자 여러분들이라면 이 상황에서 뽑으시겠어요? (잠깐 pause)"
+
   style="padding:0;overflow:hidden;">
   <!-- 좌측 패널 -->
   <div style="position:absolute;inset:0;display:grid;grid-template-columns:1fr 1fr;">
@@ -621,7 +623,7 @@
 ══════════════════════════════════════════════ -->
 <!-- S04 — 예상하는 결론 -->
 <div class="slide" id="s04"
-  data-script="아마 지금 여러분이 예상하는 결론이 있을 거예요. (pause, 청중 반응 보기)"
+
   style="padding:0;">
   <svg style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;opacity:0.06;" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice">
     <circle cx="600" cy="350" r="420" fill="none" stroke="#c96500" stroke-width="2" stroke-dasharray="14 8"/>
@@ -650,7 +652,7 @@
 
 <!-- S04b — 반전: 근데 아니에요 -->
 <div class="slide" id="s04b"
-  data-script="근데 사실 ai가 피그마처럼 핵심 도구가 될 거니까 안 쓰면 결격사유야, 그런 얘기 하려고 이 자리 만든 게 아니에요. 5년 안에 이 사람은 떨어질 거야가 아니고요. (강하게 끊고 pause)"
+
   style="padding:0;">
   <svg style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;opacity:0.05;" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice">
     <circle cx="600" cy="350" r="420" fill="none" stroke="#c96500" stroke-width="1.5" stroke-dasharray="14 8"/>
@@ -676,7 +678,7 @@
   S05 — 차이의 본질: 도구 vs 사고체계
 ══════════════════════════════════════════════ -->
 <div class="slide" id="s05"
-  data-script="피그마같은 도구는 사람이 엄청 똑똑하면 금방 배울수 있지 않을까? 라는 생각을 할 수 있거든요. 근데 ai는 달라요. 사고방식 자체가 바뀌어야 해요. 그냥 툴처럼 쓰면 원하는 결과가 안 나와요. 이게 피그마 같은 단순 도구랑 다른 이유예요."
+
   style="padding:0;">
   <div style="position:absolute;inset:0;display:flex;align-items:stretch;justify-content:center;padding:0 80px;">
     <div style="max-width:1100px;width:100%;display:flex;flex-direction:column;justify-content:space-evenly;padding:28px 0;">
@@ -720,7 +722,7 @@
   S06 — 재프레이밍: AI는 스킬
 ══════════════════════════════════════════════ -->
 <div class="slide" id="s06"
-  data-script="ai를 툴이 아니라 어떠한 스킬적인 부분, 뭔가 개념적인 사고처럼 바라봐야 해요. 디자인 관점이나 사고체계 이런 것처럼요. 이렇게 보면 오늘 제가 하는 말이 더 잘 와닿을 거예요."
+
   style="padding:0;">
   <svg style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;opacity:0.05;" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice">
     <circle cx="600" cy="350" r="300" fill="none" stroke="#c96500" stroke-width="2"/>
@@ -759,7 +761,7 @@
   S07 — 솔직한 고백: 어려운 이유
 ══════════════════════════════════════════════ -->
 <div class="slide" id="s07"
-  data-script="솔직히 말하면 초반에 큰 허들이 있고 이 허들이 단순한 배움의 허들이 아니에요. ai를 잘 쓰기 전까지는 기존 워크플로우가 훨씬 빨라요. 진짜 그래요. 그래서 적응 비용이 생각보다 크고 이게 많은 분들이 시작하다가 포기하는 이유예요."
+
   style="padding:0;overflow:hidden;">
   <div style="position:absolute;inset:0;display:grid;grid-template-columns:1fr 1fr;">
     <!-- 좌측 패널 -->
@@ -797,7 +799,7 @@
   S08 — 반전 브릿지: "근데 그냥 어렵다고 할거면"
 ══════════════════════════════════════════════ -->
 <div class="slide" id="s08"
-  data-script="그냥 어렵다고 할거면 이 자리를 안만들었겠죠? 제가 수백 시간 맨땅에 헤딩하면서 쌓은 인사이트랑 스타터킷을 가져왔어요. 이게 있으면 그 허들이 훨씬 낮아져요. (박수 유도)"
+
   style="padding:0;">
   <svg style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;opacity:0.06;" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice">
     <circle cx="600" cy="350" r="360" fill="none" stroke="#c96500" stroke-width="2.5" stroke-dasharray="10 7"/>
@@ -829,8 +831,8 @@
         <div style="font-size:clamp(13px,1.4vw,16px);color:var(--ink-dim);margin-top:8px;line-height:1.5;">오늘 바로 쓸 수 있는 것</div>
       </div>
     </div>
-    <a href="https://drive.google.com/file/d/189mZArej3N_oUEl-fBJAHMf7WllbBbQU/view?usp=sharing" target="_blank" rel="noopener" class="anim"
-      style="display:inline-flex;align-items:center;gap:10px;margin:0 auto;padding:14px 28px;border-radius:12px;background:var(--orange);color:#fff;font-size:clamp(14px,1.5vw,18px);font-weight:700;text-decoration:none;letter-spacing:-0.01em;box-shadow:0 4px 16px rgba(201,101,0,0.30);transition:opacity 0.15s;">
+    <a href="#" class="anim"
+      style="display:inline-flex;align-items:center;gap:10px;margin:0 auto;padding:14px 28px;border-radius:12px;background:var(--orange);color:#fff;font-size:clamp(14px,1.5vw,18px);font-weight:700;text-decoration:none;letter-spacing:-0.01em;box-shadow:0 4px 16px rgba(201,101,0,0.30);filter:blur(7px);pointer-events:none;">
       <span>⬇</span> 스타터킷 다운로드
     </a>
   </div>
@@ -841,7 +843,7 @@
   S09 — 선언: 왜, 언제, 뭘
 ══════════════════════════════════════════════ -->
 <div class="slide" id="s09"
-  data-script="오늘 핵심 하나만 먼저 말할게요. '어떻게'는 AI가 해요. 여러분이 집중해야 할 건 왜 하는지, 언제 쓸지, 뭘 만들지예요. 이 세 가지가 여러분의 판단 영역이에요. 나머지는 AI가 실행해요."
+
   style="padding:0;">
   <svg style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;opacity:0.05;" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice">
     <circle cx="100" cy="600" r="250" fill="none" stroke="#c96500" stroke-width="2"/>
@@ -881,7 +883,7 @@
   S10 — PM 파트: 문서 정리 시간 다이어트
 ══════════════════════════════════════════════ -->
 <div class="slide" id="s10"
-  data-script="PM이나 기획자 분들 계시죠? 예시 하나 들게요. 사람 간 정렬은 줄일 수 없어요. 그건 사람이 해야 해요. 근데 그 정렬 내용을 문서로 정리하는 시간은 줄일 수 있어요. Confluence에 자동으로 올려주는 게 그 예시예요. 판단은 사람이, 실행은 AI가요."
+
   style="padding:0;overflow:hidden;">
   <div style="position:absolute;inset:0;display:grid;grid-template-columns:1fr 1fr;">
     <!-- 좌측 패널 -->
@@ -926,7 +928,7 @@
   S11 — 시연 진입 브릿지
 ══════════════════════════════════════════════ -->
 <div class="slide" id="s11"
-  data-script="말로만 하면 안 와닿죠? 직접 보여드릴게요. 제가 실제로 쓰는 워크플로우예요. Figma에서 시작해서 Confluence 업로드까지 한 흐름이에요. 보시면서 제가 직접 뭔가 치는 순간이 있는지 보세요. 그게 없어요."
+
   style="padding:0;">
   <svg style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;opacity:0.06;" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice">
     <circle cx="950" cy="150" r="320" fill="none" stroke="#c96500" stroke-width="2"/>
@@ -950,7 +952,7 @@
 </div>
 
   <!-- ── 워크플로우 간지 ── -->
-  <div class="slide" id="s-wf-divider" data-script="자, 이제부터 실제 워크플로우 보여드릴게요. 맥락 부여부터 시작해서 운영까지예요. 각 단계마다 AI가 어디 붙어있는지, 제가 판단하는 부분이 어디인지 보세요." style="padding:0;">
+  <div class="slide" id="s-wf-divider" style="padding:0;">
     <svg style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;opacity:0.06;" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice">
       <circle cx="200" cy="600" r="280" fill="none" stroke="#c96500" stroke-width="2"/>
       <circle cx="1000" cy="100" r="240" fill="none" stroke="#c96500" stroke-width="1.5" stroke-dasharray="10 7"/>
@@ -967,7 +969,7 @@
   </div>
 
   <!-- ── S17 워크플로우 맵 ── -->
-  <div class="slide" id="s17" data-script="제 실제 워크플로우예요. 맥락 부여, 상위 기획, 세부 기획, 세부 설계, 리뷰·전달, 팔로우업, 운영. 이 7단계 전체에 AI가 붙어있어요. 처음부터 끝까지 AI가 끊기지 않아요. 제가 하는 건 방향 잡기와 최종 판단이에요." style="padding:0;">
+  <div class="slide" id="s17" style="padding:0;">
     <div style="position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;padding:44px 80px;gap:28px;">
       <div>
         <div class="eyebrow anim">실제 워크플로우</div>
@@ -1012,7 +1014,7 @@
   </div>
 
   <!-- ── S18 맥락 부여 + 상위 기획 ── -->
-  <div class="slide wf-slide" id="s18" data-script="첫 단계예요. 맥락 부여랑 상위 기획이에요. 지금까지 있었던 히스토리, 데이터, 결정 배경을 전부 AI에 줘요. 오래 담당하면 선입견이 생기는데 AI가 그걸 편향 없이 정리해줘요. 상위 기획은 VOC 분류, 경쟁사 신기능 추적, 트렌드 수집까지 AI가 처리하고 제가 우선순위 판단만 해요.">
+  <div class="slide wf-slide" id="s18">
     <h2 class="anim" style="font-size:clamp(26px,3.2vw,46px);font-weight:800;letter-spacing:-0.03em;margin-bottom:20px;">맥락을 주고, <span class="highlight">상위 기획</span>을 함께 짭니다</h2>
     <div class="flow anim" style="margin-bottom:16px;font-size:11px;">
       <span class="fi on">맥락 부여</span><span class="fa">›</span><span class="fi on">상위 기획</span><span class="fa">›</span><span class="fi">세부 기획</span><span class="fa">›</span><span class="fi">세부 설계</span><span class="fa">›</span><span class="fi">리뷰·전달</span><span class="fa">›</span><span class="fi">팔로우업</span><span class="fa">›</span><span class="fi">운영</span>
@@ -1038,7 +1040,7 @@
   </div>
 
   <!-- ── S19 세부 기획 + 세부 설계 ── -->
-  <div class="slide wf-slide" id="s19" data-script="세부 기획이랑 세부 설계예요. 빈 문서 앞에서 막막한 시간이 없어요. AI가 초안을 먼저 잡아주고 저는 다듬는 방식이에요. 설계는 AI와 핑퐁하면서 빠진 정책, 엣지 케이스를 찾아요. 그래픽도 코드로 직접 생성해요.">
+  <div class="slide wf-slide" id="s19">
     <h2 class="anim" style="font-size:clamp(26px,3.2vw,46px);font-weight:800;letter-spacing:-0.03em;margin-bottom:20px;"><span class="highlight">세부 기획·설계</span>는 AI와 핑퐁으로</h2>
     <div class="flow anim" style="margin-bottom:16px;font-size:11px;">
       <span class="fi">맥락 부여</span><span class="fa">›</span><span class="fi">상위 기획</span><span class="fa">›</span><span class="fi on">세부 기획</span><span class="fa">›</span><span class="fi on">세부 설계</span><span class="fa">›</span><span class="fi">리뷰·전달</span><span class="fa">›</span><span class="fi">팔로우업</span><span class="fa">›</span><span class="fi">운영</span>
@@ -1064,7 +1066,7 @@
   </div>
 
   <!-- ── S20 리뷰·전달 + 팔로우업 ── -->
-  <div class="slide wf-slide" id="s20" data-script="전달이랑 팔로우업이에요. Claude Code가 에이전트라서 코드 짜고 실행까지 해요. 터미널에서 자연어 한 줄이면 Confluence 페이지가 만들어져요. 팔로우업은 픽셀 단위로 배포 전후 화면 비교해서 의도치 않은 변경 잡아주고, QA 테스트 케이스도 자동 작성돼요.">
+  <div class="slide wf-slide" id="s20">
     <h2 class="anim" style="font-size:clamp(26px,3.2vw,46px);font-weight:800;letter-spacing:-0.03em;margin-bottom:20px;"><span class="highlight">전달·팔로우업</span>도 AI가 직접 실행합니다</h2>
     <div class="flow anim" style="margin-bottom:16px;font-size:11px;">
       <span class="fi">맥락 부여</span><span class="fa">›</span><span class="fi">상위 기획</span><span class="fa">›</span><span class="fi">세부 기획</span><span class="fa">›</span><span class="fi">세부 설계</span><span class="fa">›</span><span class="fi on">리뷰·전달</span><span class="fa">›</span><span class="fi on">팔로우업</span><span class="fa">›</span><span class="fi">운영</span>
@@ -1090,7 +1092,7 @@
   </div>
 
   <!-- ── S21 운영 ── -->
-  <div class="slide wf-slide" id="s21" data-script="마지막 단계 운영이에요. VOC 자동 수집, 경쟁사 신기능 출시 추적, 트렌드 모니터링을 주기적으로 돌리면 Confluence에 자동 업로드돼요. CSV 분류, 디자인 컬러 추출, 값 자동 매핑 같은 반복 작업은 파이프라인으로 만들면 다시는 손 안 대도 돼요.">
+  <div class="slide wf-slide" id="s21">
     <h2 class="anim" style="font-size:clamp(26px,3.2vw,46px);font-weight:800;letter-spacing:-0.03em;margin-bottom:20px;"><span class="highlight">운영</span>은 AI가 모니터링·알림까지</h2>
     <div class="flow anim" style="margin-bottom:16px;font-size:11px;">
       <span class="fi">맥락 부여</span><span class="fa">›</span><span class="fi">상위 기획</span><span class="fa">›</span><span class="fi">세부 기획</span><span class="fa">›</span><span class="fi">세부 설계</span><span class="fa">›</span><span class="fi">리뷰·전달</span><span class="fa">›</span><span class="fi">팔로우업</span><span class="fa">›</span><span class="fi on">운영</span>
@@ -1116,7 +1118,7 @@
   </div>
 
   <!-- ── 시연 간지 ── -->
-  <div class="slide" id="s-demo-divider" data-script="자, 이제 라이브 시연이에요. 말로만 하면 안 와닿으니까요. Figma부터 Confluence까지 직접 보여드릴게요. 코드 한 줄도 제가 직접 안 쳐요." style="padding:0;">
+  <div class="slide" id="s-demo-divider" style="padding:0;">
     <svg style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;opacity:0.06;" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice">
       <circle cx="600" cy="350" r="300" fill="none" stroke="#c96500" stroke-width="2"/>
       <circle cx="600" cy="350" r="160" fill="none" stroke="#c96500" stroke-width="1.5" stroke-dasharray="8 6"/>
@@ -1133,7 +1135,7 @@
   </div>
 
   <!-- ── S22 시연 오버뷰 ── -->
-  <div class="slide" id="s22" data-script="오늘 보여드릴 흐름이에요. Figma 디자인에서 시작해서, Figma Make로 코드 뽑고, Claude Code로 가져와서, 방향 잡고, POC 만들고, 고도화하고, 정책서 쓰고 Confluence 올리는 7단계예요. 중간에 제가 직접 코드 치는 구간이 없어요." style="align-items:flex-start;padding:48px 80px;">
+  <div class="slide" id="s22" style="align-items:flex-start;padding:48px 80px;">
     <div style="max-width:1060px;width:100%;">
       <div class="eyebrow anim">라이브 시연</div>
       <h2 class="anim" style="font-size:clamp(28px,3.6vw,52px);">말로만 하면 와닿지 않죠.<br><span class="highlight">처음부터 끝까지 직접 보여드릴게요.</span></h2>
@@ -1171,7 +1173,7 @@
   </div>
 
   <!-- ── S22-1 Step 1: Figma 디자인 ── -->
-  <div class="slide" id="s22-1" data-script="STEP 1이에요. 시작점은 기존 Figma 파일이에요. 특별한 준비 없이 이미 갖고 있는 화면에서 시작해요. 어떤 화면인지, 무엇을 구현하려는지 간단히 맥락 잡는 단계예요." style="align-items:flex-start;padding:48px 80px;">
+  <div class="slide" id="s22-1" style="align-items:flex-start;padding:48px 80px;">
     <div style="max-width:1060px;width:100%;">
       <div class="anim" style="display:flex;align-items:center;gap:10px;margin-bottom:20px;">
         <div style="padding:6px 16px;border-radius:99px;background:var(--orange);color:#fff;font-size:12px;font-weight:700;">STEP 1 / 7</div>
@@ -1197,7 +1199,7 @@
   </div>
 
   <!-- ── S22-2 Step 2: Figma Make ── -->
-  <div class="slide" id="s22-2" data-script="STEP 2, Figma Make예요. 디자인을 코드로 변환해줘요. 완벽하지 않아도 괜찮아요. 베이스 코드만 있으면 Claude Code가 나머지 다 해요. Figma에서 화면 선택 → 코드 생성 → 저장이 전부예요." style="align-items:flex-start;padding:48px 80px;">
+  <div class="slide" id="s22-2" style="align-items:flex-start;padding:48px 80px;">
     <div style="max-width:1060px;width:100%;">
       <div class="anim" style="display:flex;align-items:center;gap:10px;margin-bottom:20px;">
         <div style="padding:6px 16px;border-radius:99px;background:var(--orange);color:#fff;font-size:12px;font-weight:700;">STEP 2 / 7</div>
@@ -1223,7 +1225,7 @@
   </div>
 
   <!-- ── S22-3 Step 3: Claude Code 가져오기 ── -->
-  <div class="slide" id="s22-3" data-script="STEP 3, Claude Code로 가져오기예요. 뽑은 코드를 AIP 로드맵, 정책, 기획 맥락이 이미 들어있는 폴더로 가져와요. Claude는 이 맥락 위에서 코드를 이해해요. CLAUDE.md랑 memory에 담긴 내용이 Claude가 방향 잡는 근거가 돼요." style="align-items:flex-start;padding:48px 80px;">
+  <div class="slide" id="s22-3" style="align-items:flex-start;padding:48px 80px;">
     <div style="max-width:1060px;width:100%;">
       <div class="anim" style="display:flex;align-items:center;gap:10px;margin-bottom:20px;">
         <div style="padding:6px 16px;border-radius:99px;background:var(--orange);color:#fff;font-size:12px;font-weight:700;">STEP 3 / 7</div>
@@ -1232,7 +1234,7 @@
       <h2 class="anim" style="font-size:clamp(26px,3.2vw,46px);margin-bottom:8px;"><span class="highlight">Claude Code</span>로 가져오기</h2>
       <p class="lead anim" style="font-size:clamp(14px,1.5vw,18px);margin-bottom:20px;">
         Figma Make에서 뽑은 코드를 Claude Code 프로젝트로 가져와요.<br>
-        이미 AIP 로드맵, 정책, 기획 맥락이 들어있는 폴더예요.<br>
+        이미 <span class="rd">███</span> 로드맵, 정책, 기획 맥락이 들어있는 폴더예요.<br>
         Claude는 그 맥락 위에서 코드를 이해합니다.
       </p>
       <div class="cols-2 demo-row anim">
@@ -1242,14 +1244,14 @@
         </div>
         <div class="card" style="background:var(--orange-bg);border-color:var(--orange-br);">
           <div class="card-title">여기서 맥락이 중요해요</div>
-          <p>CLAUDE.md와 memory에 이미 담긴 AIP 로드맵·정책이 Claude가 "이 코드를 어떤 방향으로 발전시킬지" 판단하는 근거가 됩니다.</p>
+          <p>CLAUDE.md와 memory에 이미 담긴 <span class="rd">███</span> 로드맵·정책이 Claude가 "이 코드를 어떤 방향으로 발전시킬지" 판단하는 근거가 됩니다.</p>
         </div>
       </div>
     </div>
   </div>
 
   <!-- ── S22-4 Step 4: 방향 설정 ── -->
-  <div class="slide" id="s22-4" data-script="STEP 4, 방향 설정이에요. 빈 화면 앞에서 혼자 고민하는 게 아니에요. AIP 로드맵 기반으로 이 기능이 왜 필요한지, 어떤 방향인지 Claude에게 물어봐요. 맥락이 쌓여있으니까 Claude가 먼저 방향을 잡아줘요. 저는 검토하고 결정만 해요." style="align-items:flex-start;padding:48px 80px;">
+  <div class="slide" id="s22-4" style="align-items:flex-start;padding:48px 80px;">
     <div style="max-width:1060px;width:100%;">
       <div class="anim" style="display:flex;align-items:center;gap:10px;margin-bottom:20px;">
         <div style="padding:6px 16px;border-radius:99px;background:var(--orange);color:#fff;font-size:12px;font-weight:700;">STEP 4 / 7</div>
@@ -1257,14 +1259,14 @@
       </div>
       <h2 class="anim" style="font-size:clamp(26px,3.2vw,46px);margin-bottom:8px;">뭘 만들지<br><span class="highlight">가볍게 방향 잡기</span></h2>
       <p class="lead anim" style="font-size:clamp(14px,1.5vw,18px);margin-bottom:20px;">
-        AIP 로드맵과 기존 정책을 기반으로<br>
+        <span class="rd">███</span> 로드맵과 기존 정책을 기반으로<br>
         이 코드로 무엇을 구현할지, 어떤 방향으로 갈지를<br>
         Claude와 함께 빠르게 정리해요.
       </p>
       <div class="cols-2 demo-row anim">
         <div class="card">
           <div class="card-title">보여드릴 것</div>
-          <p>자연어로 "지금 AIP에서 이 기능이 필요한 이유와 우선순위"를 물어보고, Claude가 맥락 기반으로 방향을 제안하는 대화예요.</p>
+          <p>자연어로 "지금 <span class="rd">███</span>에서 이 기능이 필요한 이유와 우선순위"를 물어보고, Claude가 맥락 기반으로 방향을 제안하는 대화예요.</p>
         </div>
         <div class="card">
           <div class="card-title">이게 핵심이에요</div>
@@ -1275,7 +1277,7 @@
   </div>
 
   <!-- ── S22-5 Step 5+6: POC 설계 + 고도화 ── -->
-  <div class="slide" id="s22-5" data-script="STEP 5, 6이에요. POC 만들고 바로 고도화해요. 방향이 잡히면 바로 만들어요. 첫 결과물 확인하고 '이건 이렇게, 저건 저렇게' 대화하듯 요청하면 Claude가 반영해요. 처음부터 다시 만들 필요 없이 사이클이 대화처럼 이어져요." style="align-items:flex-start;padding:48px 80px;">
+  <div class="slide" id="s22-5" style="align-items:flex-start;padding:48px 80px;">
     <div style="max-width:1060px;width:100%;">
       <div class="anim" style="display:flex;align-items:center;gap:10px;margin-bottom:20px;">
         <div style="padding:6px 16px;border-radius:99px;background:var(--orange);color:#fff;font-size:12px;font-weight:700;">STEP 5–6 / 7</div>
@@ -1301,7 +1303,7 @@
   </div>
 
   <!-- ── S22-6 Step 7: 정책서 + Confluence ── -->
-  <div class="slide" id="s22-6" data-script="STEP 7, 마지막이에요. 정책서 작성하고 Confluence 올리는 거예요. '지금 만든 화면 기반으로 정책서 쓰고 Confluence에 올려줘' — 이 한 문장이면 끝이에요. 문서 탭 열고 붙여넣고 저장하는 과정이 없어요. Figma 화면이 코드가 되고, 코드가 정책서가 되고, 정책서가 Confluence에 올라가는 흐름이에요." style="align-items:flex-start;padding:48px 80px;">
+  <div class="slide" id="s22-6" style="align-items:flex-start;padding:48px 80px;">
     <div style="max-width:1060px;width:100%;">
       <div class="anim" style="display:flex;align-items:center;gap:10px;margin-bottom:20px;">
         <div style="padding:6px 16px;border-radius:99px;background:var(--orange);color:#fff;font-size:12px;font-weight:700;">STEP 7 / 7</div>
@@ -1327,7 +1329,7 @@
   </div>
 
   <!-- ── S22-A Claude Code = 터미널 기반, 어렵다 ── -->
-  <div class="slide" id="s22a" data-script="솔직히 말할게요. Claude Code는 터미널 기반이에요. 비개발자한테는 처음에 막막해요. Node.js 설치, 경로 이동, 명령어 입력… 에러 메시지 보면 멈추는 사람이 많아요. 이게 초반 허들의 실체예요." style="padding:0;">
+  <div class="slide" id="s22a" style="padding:0;">
     <div style="position:absolute;inset:0;display:grid;grid-template-columns:1fr 1fr;">
       <div style="background:var(--surface2);border-right:1px solid var(--border);padding:56px 64px;display:flex;flex-direction:column;justify-content:center;">
         <div class="eyebrow anim">솔직히 말하면</div>
@@ -1359,7 +1361,7 @@
   </div>
 
   <!-- ── S22-B 반전: s22a 흑백 + 중앙 빨간X ── -->
-  <div class="slide" id="s22b" data-script="근데 이건 이제 옛날 얘기예요. (X 표시 가리키며) 터미널 몰라도 돼요. 해결책이 있어요." style="padding:0;overflow:hidden;">
+  <div class="slide" id="s22b" style="padding:0;overflow:hidden;">
     <!-- s22a 완전 동일 내용 + 흑백 필터 -->
     <div style="position:absolute;inset:0;display:grid;grid-template-columns:1fr 1fr;filter:grayscale(1);">
       <div style="background:var(--surface2);border-right:1px solid var(--border);padding:56px 64px;display:flex;flex-direction:column;justify-content:center;">
@@ -1398,7 +1400,7 @@
 
   <!-- ── S22-B-원본 토큰 최적화 — 서점 비유 (이동됨) ── -->
   <!-- ── S22-C 데스크탑 앱으로 쉽게 ── -->
-  <div class="slide" id="s22c" data-script="Claude.ai 데스크탑 앱만 깔면 돼요. 앱 안에 Claude Code가 들어있어요. 터미널 몰라도 그냥 써요. claude.ai/download에서 받고 설치하면 끝이에요. 나중에 터미널이 궁금해지면 그때 넘어가도 충분해요." style="padding:0;">
+  <div class="slide" id="s22c" style="padding:0;">
     <div style="position:absolute;inset:0;display:grid;grid-template-columns:1fr 1fr;">
       <div style="background:var(--surface2);border-right:1px solid var(--border);padding:56px 64px;display:flex;flex-direction:column;justify-content:center;">
         <div class="eyebrow anim">해결책</div>
@@ -1442,7 +1444,7 @@
   </div>
 
   <!-- ── 팁 간지 ── -->
-  <div class="slide" id="s-tip-divider" data-script="이제부터 실전 팁 12가지예요. 직접 쓰면서 깨달은 것들이에요. 이것만 알았어도 3개월을 아꼈을 거예요. 하나씩 볼게요." style="padding:0;">
+  <div class="slide" id="s-tip-divider" style="padding:0;">
     <svg style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;opacity:0.07;" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice">
       <circle cx="600" cy="350" r="320" fill="none" stroke="#c96500" stroke-width="2.5" stroke-dasharray="10 7"/>
       <circle cx="600" cy="350" r="200" fill="none" stroke="#c96500" stroke-width="1.5"/>
@@ -1460,7 +1462,7 @@
   </div>
 
   <!-- ── 팁 1: CLAUDE.md + 폴더 구조 ── -->
-  <div class="slide" id="s-tip1" data-script="팁 1이에요. 폴더 구조랑 CLAUDE.md 먼저 세팅해요. CLAUDE.md가 없으면 Claude가 매번 서점 전체를 뒤져요. 프로젝트 개요, 참조 파일 경로, 라우팅 표 이 세 가지만 있으면 Claude가 필요한 파일만 골라 읽어요. 처음 세팅에 30분 투자하면 이후 작업이 다 빨라져요." style="align-items:center;">
+  <div class="slide" id="s-tip1" style="align-items:center;">
     <div class="two-col" style="max-width:1120px;">
       <div class="left">
         <div class="eyebrow anim">팁 1 / 11</div>
@@ -1490,7 +1492,7 @@
   </div>
 
   <!-- ── 팁 2: 메모리 압축 ── -->
-  <div class="slide" id="s-tip2" data-script="팁 2, 메모리 파일 압축 규칙이에요. 메모리 파일은 방치하면 비대해져요. 50줄 초과하면 압축해요. 그래도 넘으면 오래된 거 창고로 이동이에요. 창고는 필요할 때만 불러요. '메모리 파일 정리해줘' 한 줄이면 Claude가 알아서 처리해요." style="align-items:center;">
+  <div class="slide" id="s-tip2" style="align-items:center;">
     <div class="two-col" style="max-width:1120px;">
       <div class="left">
         <div class="eyebrow anim">팁 2 / 11</div>
@@ -1524,7 +1526,7 @@
   </div>
 
   <!-- ── 팁 3: Figma SVG 첨부 ── -->
-  <div class="slide" id="s-tip3" data-script="팁 3, Figma SVG 첨부예요. 이미지만 주면 레이아웃이랑 간격을 잘못 해석해요. 재수정이 반복돼요. SVG 첨부하면 구조, 간격, 텍스트를 정확하게 파악해요. Figma에서 레이어 우클릭 → Copy as SVG → 붙여넣기. 30초면 돼요. 재수정 횟수가 절반으로 줄어요." style="align-items:center;">
+  <div class="slide" id="s-tip3" style="align-items:center;">
     <div class="two-col" style="max-width:1120px;">
       <div class="left">
         <div class="eyebrow anim">팁 3 / 11</div>
@@ -1561,7 +1563,7 @@
   </div>
 
   <!-- ── 팁 4: 기획보다 POC 먼저 ── -->
-  <div class="slide" id="s-tip4" data-script="팁 4, 기획보다 POC 먼저예요. 기획서를 먼저 쓰면 글만 보고 판단해요. POC 먼저 만들면 만들다가 '아, 이 흐름이 어색하네'가 실제로 보여요. 기획서 글자만 읽을 때는 못 잡는 것들이에요. POC 먼저 만들고, 써보고, 기획서는 역으로 써요. 훨씬 탄탄해져요." style="align-items:center;">
+  <div class="slide" id="s-tip4" style="align-items:center;">
     <div class="two-col" style="max-width:1120px;">
       <div class="left">
         <div class="eyebrow anim">팁 4 / 11</div>
@@ -1591,7 +1593,7 @@
   </div>
 
   <!-- ── 팁 5: 베이스 파일 ── -->
-  <div class="slide" id="s-tip5" data-script="팁 5, 자주 쓰는 화면을 베이스 파일로 만들어두는 거예요. Chat 화면, 리스트 화면 같은 패턴을 HTML 파일로 저장해두면 새 POC는 파일 복사 → 기능만 추가예요. 매번 제로베이스가 아니에요. 단, 반드시 GitHub에 저장하세요. 로컬만 있으면 Claude Code가 정리할 때 사라져요." style="align-items:center;">
+  <div class="slide" id="s-tip5" style="align-items:center;">
     <div class="two-col" style="max-width:1120px;">
       <div class="left">
         <div class="eyebrow anim">팁 5 / 11</div>
@@ -1617,7 +1619,7 @@
   </div>
 
   <!-- ── 팁 6: POC 범위 명확히 ── -->
-  <div class="slide" id="s-tip6" data-script="팁 6, POC 범위 명확히 하기예요. 2시간 만든 POC 공유했더니 '이거 실제 API 연결된 거죠?'라는 말이 나와요. 이게 자주 생기는 오해예요. POC 공유 전에 반드시 UX/UI 흐름 참고용이고 데이터는 더미라고 명시하세요. 화면 상단에 배지 달면 더 좋아요." style="align-items:center;">
+  <div class="slide" id="s-tip6" style="align-items:center;">
     <div class="two-col" style="max-width:1120px;">
       <div class="left">
         <div class="eyebrow anim">팁 6 / 11</div>
@@ -1646,7 +1648,7 @@
   </div>
 
   <!-- ── 팁 7: 목줄 전략 ── -->
-  <div class="slide" id="s-tip7" data-script="팁 7, AI 디자인 감각 한계랑 목줄 전략이에요. AI는 기능은 만들어요. 근데 '왠지 어색한' 감각은 못 잡아요. 그게 디자이너 역할이에요. 초반엔 느슨하게 오픈된 요청으로 시작하고, 갈수록 명령 단위를 세분화해요. 텍스트 컬러 하나, 간격 1px씩으로요." style="align-items:center;">
+  <div class="slide" id="s-tip7" style="align-items:center;">
     <div class="two-col" style="max-width:1120px;">
       <div class="left">
         <div class="eyebrow anim">팁 7 / 11</div>
@@ -1684,7 +1686,7 @@
   </div>
 
   <!-- ── 팁 8: 수정사항 단계별 처리 ── -->
-  <div class="slide" id="s-tip8" data-script="팁 8, 수정사항 묶어서 단계별 처리예요. 하나씩 요청하면 코드를 그때마다 다시 읽어요. 비효율이에요. 반대로 한꺼번에 다 던지면 누락이 생겨요. 수정사항 10개를 주고 '3단계 계획 세워서 처리해줘'라고 하면 코드 1번 읽고 3/3/4로 나눠서 처리해요. 누락 없이 토큰도 절약이에요." style="align-items:center;">
+  <div class="slide" id="s-tip8" style="align-items:center;">
     <div class="two-col" style="max-width:1120px;">
       <div class="left">
         <div class="eyebrow anim">팁 8 / 11</div>
@@ -1714,7 +1716,7 @@
   </div>
 
   <!-- ── 팁 9: POC 상태창 ── -->
-  <div class="slide" id="s-tip9" data-script="팁 9, POC에 상태창 만들기예요. 로딩, 에러, 빈 화면 — 이 상태들을 POC 안에서 버튼 하나로 보여줄 수 있으면 개발자와 리뷰가 완전히 달라져요. '이 상태에서는 이렇게 돼요'를 클릭 한 번으로 보여주는 게 말로 설명하는 것보다 10배 빨라요." style="align-items:center;">
+  <div class="slide" id="s-tip9" style="align-items:center;">
     <div class="two-col" style="max-width:1120px;">
       <div class="left">
         <div class="eyebrow anim">팁 9 / 11</div>
@@ -1747,7 +1749,7 @@
   </div>
 
   <!-- ── 팁 10: Claude + Gemini 조합 ── -->
-  <div class="slide" id="s-tip10" data-script="팁 10, Claude Code + Gemini 조합이에요. 초안이랑 대규모 수정은 Claude Code로 해요. 전체 맥락 파악이 필요하니까요. 세부 코드 수정은 코드 파일을 Gemini에 붙여넣고 '이 부분 이렇게 바꿔줘' 하면 돼요. Claude 토큰 절약 + 더 빠른 수정이에요. 토큰 10번을 1번으로 줄이는 방법이에요." style="align-items:center;">
+  <div class="slide" id="s-tip10" style="align-items:center;">
     <div class="two-col" style="max-width:1120px;">
       <div class="left">
         <div class="eyebrow anim">팁 10 / 11</div>
@@ -1776,7 +1778,7 @@
   </div>
 
   <!-- ── 팁 11: GitHub + Vercel 자동화 ── -->
-  <div class="slide" id="s-tip11" data-script="팁 11, GitHub + Vercel 자동화예요. POC를 로컬에만 두면 언제든 사라져요. Claude Code가 폴더 정리할 때 삭제한 걸 직접 경험했어요. GitHub 연결해두면 POC 완성 → push → Vercel 자동 배포 → 링크 공유예요. 전부 자동이에요. 설정도 Claude Code에 '설정해줘' 하면 알아서 해요." style="align-items:center;">
+  <div class="slide" id="s-tip11" style="align-items:center;">
     <div class="two-col" style="max-width:1120px;">
       <div class="left">
         <div class="eyebrow anim">팁 11 / 12</div>
@@ -1805,7 +1807,7 @@
   </div>
 
   <!-- ── 팁 12: QA 무한루프 ── -->
-  <div class="slide" id="s-tip12" data-script="팁 12, 마지막이에요. QA 루프 돌리기예요. 만들고 끝이 아니에요. 에이전트 여러 개를 돌려서 서로 검토하게 해요. 에이전트 1이 계획 세우고, 에이전트 2가 구현하고, 에이전트 3·4·5가 냉정하게 평가해서 피드백 줘요. 이 루프를 98점 될 때까지 반복해요. 마지막은 사람이 검수해요." style="align-items:center;">
+  <div class="slide" id="s-tip12" style="align-items:center;">
     <div class="two-col" style="max-width:1120px;">
       <div class="left">
         <div class="eyebrow anim">팁 12 / 12</div>
@@ -1851,7 +1853,7 @@
   </div>
 
   <!-- ── 클로징 ── -->
-  <div class="slide" id="s-closing" data-script="오늘의 인사이트 딱 하나예요. AI는 실행을 가져갔어요. 남은 건 판단이에요. 도구가 바뀐 게 아니에요. 같은 판단으로 낼 수 있는 결과가 달라진 거예요. 여러분은 이미 매일 결정하고, 우선순위 정하고, 방향 잡고 있잖아요. 그게 판단이에요. 오늘 밤, claude.ai 열고 '나는 [직무]야, [문제]가 있어. 어떻게 접근할까?' 이 한 문장이면 시작이에요." style="padding:0;">
+  <div class="slide" id="s-closing" style="padding:0;">
     <svg style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;opacity:0.06;" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice">
       <circle cx="980" cy="120" r="340" fill="none" stroke="#c96500" stroke-width="2"/>
       <circle cx="980" cy="120" r="200" fill="none" stroke="#c96500" stroke-width="1.5"/>
@@ -1891,8 +1893,8 @@
     </div>
   </div>
 
-  <!-- ── S-채널 AI 채널 소통 ── -->
-  <div class="slide" id="s-channel" data-script="오늘 이후로도 AI 채널에서 같이 써봐요. 막히는 것, 새로 발견한 것, 써보고 좋았던 프롬프트 뭐든 공유해주세요. 혼자 쓰는 것보다 같이 쓰는 게 훨씬 빠르게 늘어요. 질문, 성공 사례, 실패 사례 다 환영해요." style="padding:0;">
+  <!-- ── 소통 채널 ── -->
+  <div class="slide" id="s-channel" style="padding:0;">
     <svg style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;opacity:0.05;" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice">
       <circle cx="200" cy="150" r="260" fill="none" stroke="#c96500" stroke-width="2" stroke-dasharray="12 8"/>
       <circle cx="1000" cy="560" r="200" fill="none" stroke="#c96500" stroke-width="1.5"/>
@@ -1902,7 +1904,7 @@
       <div>
         <div class="eyebrow anim">오늘 이후로도</div>
         <h2 class="anim" style="font-size:clamp(38px,5.2vw,72px);line-height:1.05;margin-top:10px;">
-          AI 채널에서<br><span class="highlight">같이 써봐요</span>
+          <span class="rd">█████</span>에서<br><span class="highlight">같이 써봐요</span>
         </h2>
       </div>
       <p class="lead anim" style="text-align:center;font-size:clamp(18px,2vw,26px);max-width:640px;margin:0 auto;line-height:1.75;">
@@ -1932,7 +1934,7 @@
   </div>
 
   <!-- ── S26 Q&A ── -->
-  <div class="slide" id="s26" data-script="Q&A 시간이에요. 궁금한 거, 막막한 거, 뭐든 괜찮아요. '오늘 본 것 중에 어디서부터 시작하면 좋을지 모르겠어요' 같은 것도 좋고, '이거 실무에서 진짜 되나요?' 같은 것도 좋아요. 지금 쓰는 워크플로우에 AI 어디 붙이면 좋을지도 물어보세요." style="align-items:center;">
+  <div class="slide" id="s26" style="align-items:center;">
     <!-- 배경 장식 -->
     <svg style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;opacity:0.045;" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice">
       <circle cx="600" cy="350" r="380" fill="none" stroke="#c96500" stroke-width="2" stroke-dasharray="10 8"/>
@@ -1959,14 +1961,6 @@
   <div class="progress-bar" id="progressBar"></div>
   <div class="slide-num" id="slideNum">1 / 30</div>
 
-  <!-- 스크립트 트리거 버튼 — 우측 하단 고정 -->
-  <div class="script-trigger" id="scriptTrigger" title="스크립트 보기 (S)">✦</div>
-
-  <!-- 스크립트 힌트 오버레이 — deck 내부 absolute -->
-  <div class="script-overlay" id="scriptOverlay">
-    <div class="s-label">SCRIPT — S 키 또는 버튼으로 토글</div>
-    <div id="scriptText"></div>
-  </div>
 </div><!-- /deck -->
 
 <script>
@@ -1996,7 +1990,6 @@
   const slides = document.querySelectorAll('.slide');
   const total = slides.length;
   let cur = 0;
-  let scriptVisible = false;
 
   function show(idx) {
     const next = Math.max(0, Math.min(idx, total - 1));
@@ -2004,7 +1997,6 @@
       // 초기 호출 시 이미 active면 remove 없이 진행
       document.getElementById('progressBar').style.width = ((cur + 1) / total * 100) + '%';
       document.getElementById('slideNum').textContent = (cur + 1) + ' / ' + total;
-      if (scriptVisible) updateScriptText();
       return;
     }
     slides[cur].classList.remove('active');
@@ -2012,28 +2004,6 @@
     slides[cur].classList.add('active');
     document.getElementById('progressBar').style.width = ((cur + 1) / total * 100) + '%';
     document.getElementById('slideNum').textContent = (cur + 1) + ' / ' + total;
-
-    // 슬라이드 전환 시 스크립트 힌트 텍스트 업데이트
-    if (scriptVisible) updateScriptText();
-  }
-
-  function updateScriptText() {
-    const hint = slides[cur].getAttribute('data-script') || '(스크립트 힌트 없음)';
-    document.getElementById('scriptText').textContent = hint;
-  }
-
-  function toggleScript() {
-    scriptVisible = !scriptVisible;
-    const overlay = document.getElementById('scriptOverlay');
-    const trigger = document.getElementById('scriptTrigger');
-    if (scriptVisible) {
-      updateScriptText();
-      overlay.classList.add('visible');
-      trigger.classList.add('active');
-    } else {
-      overlay.classList.remove('visible');
-      trigger.classList.remove('active');
-    }
   }
 
   function go(dir) { show(cur + dir); }
@@ -2043,16 +2013,9 @@
     if (e.key === 'ArrowLeft'  || e.key === 'ArrowUp') go(-1);
     if (e.key === 'Home') show(0);
     if (e.key === 'End')  show(total - 1);
-    if (e.key === 's' || e.key === 'S') toggleScript();
-  });
-
-  document.getElementById('scriptTrigger').addEventListener('click', e => {
-    e.stopPropagation();
-    toggleScript();
   });
 
   deck.addEventListener('click', e => {
-    if (e.target.closest('.script-trigger') || e.target.closest('.script-overlay')) return;
     const rect = deck.getBoundingClientRect();
     go(e.clientX - rect.left > rect.width / 2 ? 1 : -1);
   });
