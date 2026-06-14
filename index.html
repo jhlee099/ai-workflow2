@@ -9,7 +9,7 @@
 <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
 <link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin/>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css"/>
 <title>AI로 일하는 IT 실무자의 다음 시대</title>
 <meta name="description" content="AI 워크플로우 실전 강연 — 판단은 사람이, 실행은 AI가. 맥락 부여부터 운영까지 7단계 워크플로우와 실전 팁 8가지."/>
 <!-- 공유 미리보기 (OG / Twitter) -->
@@ -512,29 +512,12 @@
 
   /* ── 스크립트 힌트 오버레이 ── */
   .rd { display:inline-block; filter:blur(6px); opacity:0.82; user-select:none; pointer-events:none; }
-  .script-overlay {
-    position: absolute;
-    bottom: 0; left: 0; right: 0;
-    background: rgba(20, 18, 14, 0.90);
-    color: #f0ede6;
-    font-size: clamp(14px,18px,18px);
-    line-height: 1.7;
-    padding: 14px 40px 22px;
-    z-index: 10001;
-    border-top: 2px solid var(--orange);
-    backdrop-filter: blur(6px);
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.2s ease, visibility 0.2s ease;
-  }
-  .script-overlay.visible { opacity: 1; visibility: visible; }
-  .script-overlay .s-label {
-    font-size: 10px;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--orange);
-    font-weight: 700;
-    margin-bottom: 6px;
+
+  /* 키보드 포커스 표시 (접근성) */
+  a:focus-visible, [role="button"]:focus-visible, .slide-num:focus-visible {
+    outline: 2px solid var(--orange);
+    outline-offset: 2px;
+    border-radius: 4px;
   }
 
   /* ── 대비 컴포넌트 ── */
@@ -1623,7 +1606,7 @@ AI가 실행을 맡으면, 판단의 질이 곧 결과물의 질이에요.
 </div>
 </div>
 </div>
-<div class="wf-demo-label anim">예시</div>
+<div class="wf-demo-label anim">예시 <span style="opacity:.6; font-weight:400;">· 사내 데모는 비공개</span></div>
 <div class="wf-demo-row anim">
 <a class="wf-demo-link" target="_blank" rel="noopener noreferrer"><svg class="wf-demo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg><span class="wf-demo-text"><span class="rd">█████</span></span></a>
 <a class="wf-demo-link" target="_blank" rel="noopener noreferrer"><svg class="wf-demo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg><span class="wf-demo-text"><span class="rd">██████</span></span></a>
@@ -1654,7 +1637,7 @@ AI가 실행을 맡으면, 판단의 질이 곧 결과물의 질이에요.
 </div>
 </div>
 </div>
-<div class="wf-demo-label anim">예시</div>
+<div class="wf-demo-label anim">예시 <span style="opacity:.6; font-weight:400;">· 사내 데모는 비공개</span></div>
 <div class="wf-demo-row anim">
 <a class="wf-demo-link" target="_blank" rel="noopener noreferrer"><svg class="wf-demo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg><span class="wf-demo-text"><span class="rd">██████████</span></span></a>
 <a class="wf-demo-link" target="_blank" rel="noopener noreferrer"><svg class="wf-demo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg><span class="wf-demo-text"><span class="rd">██████████</span></span></a>
@@ -1685,7 +1668,7 @@ AI가 실행을 맡으면, 판단의 질이 곧 결과물의 질이에요.
 </div>
 </div>
 </div>
-<div class="wf-demo-label anim">예시</div>
+<div class="wf-demo-label anim">예시 <span style="opacity:.6; font-weight:400;">· 사내 데모는 비공개</span></div>
 <div class="wf-demo-row anim">
 <a class="wf-demo-link" target="_blank" rel="noopener noreferrer"><svg class="wf-demo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg><span class="wf-demo-text"><span class="rd">███</span> 데모</span></a>
 </div>
@@ -1716,7 +1699,7 @@ AI가 실행을 맡으면, 판단의 질이 곧 결과물의 질이에요.
 </div>
 </div>
 <div class="anim mt-12 fs-body fg-dimmer t-center">※ Description은 자산화를 위해 수기로 Figma에 업데이트하고 있어요.</div>
-<div class="wf-demo-label anim">예시</div>
+<div class="wf-demo-label anim">예시 <span style="opacity:.6; font-weight:400;">· 사내 데모는 비공개</span></div>
 <div class="wf-demo-row anim">
 <a class="wf-demo-link" target="_blank" rel="noopener noreferrer"><svg class="wf-demo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg><span class="wf-demo-text"><span class="rd">███████</span></span></a>
 <a class="wf-demo-link" target="_blank" rel="noopener noreferrer"><svg class="wf-demo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg><span class="wf-demo-text"><span class="rd">███████</span></span></a>
@@ -1747,7 +1730,7 @@ AI가 실행을 맡으면, 판단의 질이 곧 결과물의 질이에요.
 </div>
 </div>
 </div>
-<div class="wf-demo-label anim">예시</div>
+<div class="wf-demo-label anim">예시 <span style="opacity:.6; font-weight:400;">· 사내 데모는 비공개</span></div>
 <div class="wf-demo-row anim">
 <a class="wf-demo-link" target="_blank" rel="noopener noreferrer"><svg class="wf-demo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg><span class="wf-demo-text"><span class="rd">███████</span></span></a>
 <a class="wf-demo-link" target="_blank" rel="noopener noreferrer"><svg class="wf-demo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg><span class="wf-demo-text"><span class="rd">████████</span></span></a>
@@ -1863,7 +1846,9 @@ AI가 실행을 맡으면, 판단의 질이 곧 결과물의 질이에요.
   <div class="row ai-center jc-center flex-1" style="min-height:0; margin-top:1px; position:relative;">
     <div style="position:relative; max-width:100%; max-height:100%; border-radius:20px; overflow:hidden; box-shadow:0 8px 32px rgba(0,0,0,0.14); -webkit-mask-image:linear-gradient(to bottom, black 0%, black 95%, transparent 100%); mask-image:linear-gradient(to bottom, black 0%, black 95%, transparent 100%);">
       <img
-        src="beg4_screenshot.png"
+        src="beg4_screenshot.webp"
+        alt="웹 LLM(Gemini)과 Claude Code를 나란히 띄워 비교하는 화면"
+        loading="lazy"
         style="display:block; width:102%; max-height:100%; object-fit:contain; margin:0 auto;"
       />
     </div>
@@ -3368,11 +3353,6 @@ AI가 실행을 맡으면, 판단의 질이 곧 결과물의 질이에요.
 </div>
 
 
-
-<div class="script-overlay" id="scriptOverlay" role="complementary" aria-label="강연 스크립트 힌트">
-<div class="s-label">SCRIPT HINT — Ctrl+S 키로 토글</div>
-<div id="scriptText"></div>
-</div>
 </div>
 <div class="slide-num" id="slideNum">1 / —</div>
 <div class="progress-bar" id="progressBar"></div>
@@ -3420,7 +3400,6 @@ AI가 실행을 맡으면, 판단의 질이 곧 결과물의 질이에요.
   const slides = document.querySelectorAll('.slide');
   const total = slides.length;
   let cur = 0;
-  let scriptVisible = false;
 
   // 페이지 카운터 클릭 → 마지막 슬라이드로 이동
   document.getElementById('slideNum').addEventListener('click', (e) => { e.stopPropagation(); show(total - 1); });
@@ -3437,7 +3416,6 @@ AI가 실행을 맡으면, 판단의 질이 곧 결과물의 질이에요.
     if (next === cur && slides[cur].classList.contains('active')) {
       // 초기 호출 시 이미 active면 remove 없이 진행
       updateChrome();
-      if (scriptVisible) updateScriptText();
       return;
     }
     slides[cur].classList.remove('active');
@@ -3463,23 +3441,6 @@ AI가 실행을 맡으면, 판단의 질이 곧 결과물의 질이에요.
     updateChrome();
 
     // 슬라이드 전환 시 스크립트 힌트 텍스트 업데이트
-    if (scriptVisible) updateScriptText();
-  }
-
-  function updateScriptText() {
-    const hint = slides[cur].getAttribute('data-script') || '(스크립트 힌트 없음)';
-    document.getElementById('scriptText').textContent = hint;
-  }
-
-  function toggleScript() {
-    scriptVisible = !scriptVisible;
-    const overlay = document.getElementById('scriptOverlay');
-    if (scriptVisible) {
-      updateScriptText();
-      overlay.classList.add('visible');
-    } else {
-      overlay.classList.remove('visible');
-    }
   }
 
   function go(dir) { show(cur + dir); }
