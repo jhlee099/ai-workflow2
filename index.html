@@ -81,6 +81,7 @@
     transform: translate(-50%, -50%) scale(1);
     overflow: hidden;
     background: var(--bg);
+    visibility: hidden; /* fitDeck()이 스케일 계산 후 노출 — 초기 확대 플래시 방지 */
   }
 
   .slide {
@@ -3316,6 +3317,7 @@ AI가 실행을 맡으면, 판단의 질이 곧 결과물의 질이에요.
     else { scale = sNorm; deckRotated = false; }
     deck.style.transform = 'translate(-50%, -50%) scale(' + scale + ')' + rot;
     slideNumEl.style.fontSize = Math.round(11 * scale) + 'px';
+    deck.style.visibility = 'visible'; // 스케일 적용 후 노출
   }
   fitDeck();
   let _resizeTimer;
@@ -3323,6 +3325,9 @@ AI가 실행을 맡으면, 판단의 질이 곧 결과물의 질이에요.
     clearTimeout(_resizeTimer);
     _resizeTimer = setTimeout(fitDeck, 50);
   });
+  // 모바일 주소창 변동·전체 로드·방향 전환 후에도 다시 맞춤
+  window.addEventListener('load', fitDeck);
+  window.addEventListener('orientationchange', () => setTimeout(fitDeck, 100));
 
   // anim 딜레이: nth-child CSS 대신 JS로 슬라이드별 순서 계산
   document.querySelectorAll('.slide').forEach(slide => {
