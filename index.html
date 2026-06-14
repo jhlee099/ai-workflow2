@@ -64,6 +64,8 @@
   body {
     font-family: 'Pretendard', 'Apple SD Gothic Neo', -apple-system, sans-serif;
     background: var(--bg);
+    word-break: keep-all;  /* 한글 단어 중간 끊김 방지 — 전역(공백에서만 줄바꿈) */
+    text-wrap: pretty;     /* 마지막 줄 외톨이 단어(고아) 방지 — 전체 상속 */
     color: var(--ink);
     overflow: hidden;
     width: 100vw;
@@ -859,6 +861,8 @@
 
   /* word-break keep-all (한글 줄바꿈) */
   .kw { word-break: keep-all; }
+  /* 짧은 블록(제목·핵심 한 줄·리드·문단·캡션)은 줄 길이를 균형 있게 → 외톨이 줄 방지 */
+  h1, h2, h3, h4, p, .lead, .key-line, .card-title, .eyebrow, .card p, li span { text-wrap: balance; }
 
   /* fill: position absolute inset 0 */
   .fill { position: absolute; inset: 0; }
