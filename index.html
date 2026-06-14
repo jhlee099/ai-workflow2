@@ -3456,8 +3456,8 @@ AI가 실행을 맡으면, 판단의 질이 곧 결과물의 질이에요.
     const hint = document.createElement('div');
     hint.className = 'nav-hint';
     hint.innerHTML = isTouch
-      ? '👆 좌·우 <b>탭</b> 또는 <b>스와이프</b>로 넘기세요'
-      : '<span class="nh-key">←</span><span class="nh-key">→</span> 또는 <b>클릭</b>으로 넘기세요';
+      ? '👆 옆으로 <b>스와이프</b>해서 넘기세요'
+      : '<span class="nh-key">←</span><span class="nh-key">→</span> <b>화살표 키</b>로 넘기세요';
     document.body.appendChild(hint);
     setTimeout(() => hint.classList.add('visible'), 400);
     setTimeout(() => hint.classList.remove('visible'), 4200);
