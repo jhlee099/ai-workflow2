@@ -3455,9 +3455,10 @@ AI가 실행을 맡으면, 판단의 질이 곧 결과물의 질이에요.
     const isTouch = ('ontouchstart' in window) || navigator.maxTouchPoints > 0;
     const hint = document.createElement('div');
     hint.className = 'nav-hint';
-    hint.innerHTML = isTouch
-      ? '👆 옆으로 <b>스와이프</b>해서 넘기세요'
-      : '<span class="nh-key">←</span><span class="nh-key">→</span> <b>화살표 키</b>로 넘기세요';
+    // 하이브리드 기기(터치+키보드)도 틀리지 않게 둘 다 안내, 기기상 더 쓸 법한 방법을 앞에
+    const swipe = '👆 <b>스와이프</b>';
+    const keys = '<span class="nh-key">←</span><span class="nh-key">→</span> <b>키</b>';
+    hint.innerHTML = (isTouch ? swipe + ' 또는 ' + keys : keys + ' 또는 ' + swipe) + '로 넘기세요';
     document.body.appendChild(hint);
     setTimeout(() => hint.classList.add('visible'), 400);
     setTimeout(() => hint.classList.remove('visible'), 4200);
