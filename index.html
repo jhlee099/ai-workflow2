@@ -5,6 +5,11 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0, viewport-fit=cover" name="viewport"/>
 <meta name="theme-color" content="#f7f7f5"/>
+<link rel="canonical" href="https://ai-lecture-public.vercel.app/"/>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+<link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"/>
 <title>AI로 일하는 IT 실무자의 다음 시대</title>
 <meta name="description" content="AI 워크플로우 실전 강연 — 판단은 사람이, 실행은 AI가. 맥락 부여부터 운영까지 7단계 워크플로우와 실전 팁 8가지."/>
 <!-- 공유 미리보기 (OG / Twitter) -->
@@ -35,7 +40,7 @@
 
     --ink:       #2e2c29;   /* 타이틀·본문 — 완전 블랙 지양 */
     --ink-dim:   #5c5a56;   /* 서브텍스트·설명 */
-    --ink-dimmer:#8a8a86;   /* 캡션·레이블·힌트 */
+    --ink-dimmer:#777771;   /* 캡션·레이블·힌트 (대비 개선) */
 
     --green:  #166534;
     --red:    #b91c1c;
@@ -73,6 +78,7 @@
 
   html {
     background: var(--bg);   /* 레터박스/오버스크롤 영역도 크림색 (검정 방지) */
+    overscroll-behavior: none;  /* 풀투리프레시·바운스 방지 (앱 같은 고정 경험) */
   }
   body {
     font-family: 'Pretendard', 'Apple SD Gothic Neo', -apple-system, sans-serif;
@@ -167,6 +173,19 @@
     text-align: center; line-height: 1.5;
   }
   .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+  /* 네비 화살표 — 클릭으로 넘어감을 알리는 은은한 affordance (데스크탑 전용) */
+  .nav-edge {
+    position: fixed; top: 50%; transform: translateY(-50%);
+    font-size: 38px; line-height: 1; font-weight: 300;
+    color: var(--ink-dimmer); opacity: 0.22;
+    z-index: 999; pointer-events: none; user-select: none;
+    transition: opacity 0.25s ease;
+  }
+  .nav-edge.left  { left: 16px; }
+  .nav-edge.right { right: 16px; }
+  @media (hover: hover) and (pointer: fine) { body:hover .nav-edge { opacity: 0.4; } }
+  @media (hover: none), (pointer: coarse) { .nav-edge { display: none; } } /* 터치 기기엔 숨김(탭이 직관적) */
 
   /* 모션 최소화 선호 시 애니메이션 끔 (접근성) */
   @media (prefers-reduced-motion: reduce) {
@@ -3358,6 +3377,8 @@ AI가 실행을 맡으면, 판단의 질이 곧 결과물의 질이에요.
 <div class="slide-num" id="slideNum">1 / —</div>
 <div class="progress-bar" id="progressBar"></div>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
+<div class="nav-edge left" aria-hidden="true">‹</div>
+<div class="nav-edge right" aria-hidden="true">›</div>
 <script>
   const deck = document.getElementById('deck');
 
