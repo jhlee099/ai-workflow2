@@ -2337,7 +2337,7 @@ AI가 실행을 맡으면, 판단의 질이 곧 결과물의 질이에요.
             <div class="row stack g-2 mt-2" style="line-height:1.35;">
               <span class="fs-body-sm fg-ink" style="line-height:1.35;">"기획 작업이면 → <span class="ff-mono fg-orange">mem_product.md</span>"</span>
               <span class="fs-body-sm fg-ink" style="line-height:1.35;">"OKR 질문이면 → <span class="ff-mono fg-orange">mem_okr.md</span>"</span>
-              <span class="fs-body-sm fg-ink" style="line-height:1.35;">"디자인 작업이면 → <span class="ff-mono fg-orange">design_rules.md</span>"</span>
+              <span class="fs-body-sm fg-ink" style="line-height:1.35;">"디자인 작업이면 → <span class="ff-mono fg-orange">mem_design.md</span>"</span>
             </div>
           </div>
         </div>
@@ -2992,7 +2992,7 @@ AI가 실행을 맡으면, 판단의 질이 곧 결과물의 질이에요.
 <div class="row stack g-16">
 <div class="card anim bg-warn bc-orange">
 <div class="card-title">지침</div>
-<p>최대 실행 단계를 제한하거나, 초기 프롬프트 첫머리에 <span class="em">자율 디버깅 한도</span>를 명시해 둬요.</p>
+<p>대화 첫머리에 <span class="em">자율 디버깅 한도</span>를 정해 둬요 — "몇 번 실패하면 멈추고 나한테 물어봐"처럼요.</p>
 </div>
 <div class="card anim">
 <div class="card-title">목적</div>
@@ -3116,23 +3116,23 @@ AI가 실행을 맡으면, 판단의 질이 곧 결과물의 질이에요.
 <div class="eyebrow anim">팁 6 / 8</div>
 <div class="anim row ai-center g-18 mb-16">
 <div class="tip-badge">6</div>
-<h2 class="fs-display fw-800 fg-ink kw ls-tight2">기술 스택 제약 ·<br/>명명 규칙</h2>
+<h2 class="fs-display fw-800 fg-ink kw ls-tight2">위임 전<br/>우리 규칙 먼저 주기</h2>
 </div>
 <div class="key-line anim">
-          '작동만 되는' 스파게티 코드는<br/>결국 기술 부채예요
+          그냥 맡기면 우리 프로젝트와<br/>따로 노는 결과가 나와요
         </div>
-<p class="lead anim fs-lead mt-16">위임 전에 제약을 안 걸면, 당장은 돌아가도 나중에 손 못 대는 코드가 쌓여요.</p>
+<p class="lead anim fs-lead mt-16">위임 전에 우리 팀·프로젝트의 규칙을 먼저 제약으로 주면, 처음부터 결대로 나와요.</p>
 </div>
 <div class="row stack g-16">
 <div class="card anim bg-warn bc-orange">
 <div class="card-title">지침</div>
-<p>위임 전, 사내 프레임워크 버전·컴포넌트 설계 원칙·명명 규칙(<span class="em">Semantic Naming</span>)을 시스템 제약으로 주입해요.</p>
+<p>위임 전에 우리 프로젝트 규칙 — <span class="em">디자인 시스템·네이밍·폴더 구조·금지 사항</span> — 을 먼저 정리해 제약으로 줘요. 개발이 얽히면 팀 프레임워크·코드 컨벤션도 함께요.</p>
 </div>
 <div class="card anim">
 <div class="card-title">목적</div>
-<p>겨우 작동하는 스파게티 코드 생성을 막고 기술 부채를 예방해요.</p>
+<p>프로젝트와 따로 노는 결과물, 나중에 손대기 힘든 산출물을 막아요.</p>
 </div>
-<div class="anim bg-surface2 bd r-8 italic fg-dim kw lh-15 pad-12-16 fs-body-sm"><span class="fw-700 fg-orange">프롬프트 예시</span><br/>"모든 컴포넌트는 함수형으로, 파일명은 PascalCase. 스타일은 Tailwind만 쓰고 인라인 스타일은 금지."</div>
+<div class="anim bg-surface2 bd r-8 italic fg-dim kw lh-15 pad-12-16 fs-body-sm"><span class="fw-700 fg-orange">프롬프트 예시</span><br/>"우리 프로젝트 규칙(디자인 시스템·네이밍·폴더 구조)을 먼저 알려줄게. 이걸 지켜서 만들고, 어기면 안 되는 항목은 굵게 표시해."</div>
 </div>
 </div>
 </div>
@@ -3155,23 +3155,23 @@ AI가 실행을 맡으면, 판단의 질이 곧 결과물의 질이에요.
 <div class="eyebrow anim">팁 7 / 8</div>
 <div class="anim row ai-center g-18 mb-16">
 <div class="tip-badge">7</div>
-<h2 class="fs-display fw-800 fg-ink kw ls-tight2">다중 모델<br/>교차 검증</h2>
+<h2 class="fs-display fw-800 fg-ink kw ls-tight2">AI에게<br/>교차 검증 시키기</h2>
 </div>
 <div class="key-line anim">
-          다른 모델에 Diff·부작용 요약을 시켜<br/>교차 검증해요
+          만든 AI 말고 새 눈으로<br/>변경점·구멍을 점검하게 해요
         </div>
 <p class="lead anim fs-lead mt-16">전수 검사의 피로를 줄이면서, 비전문가도 안전하게 검증할 수 있게 해주는 방법이에요.</p>
 </div>
 <div class="row stack g-16">
 <div class="card anim bg-warn bc-orange">
 <div class="card-title">지침</div>
-<p>주 에이전트가 만든 코드를 다른 추론 모델에 넣어 검증 리포트를 받고, <span class="em">변경점(Diff)·부작용 요약</span>을 강제해요.</p>
+<p>결과물을 새 세션(또는 다른 에이전트)에 다시 넣어, <span class="em">변경점(Diff) 요약</span>과 "이게 다른 곳에 영향 주는지"를 점검하게 해요.</p>
 </div>
 <div class="card anim">
 <div class="card-title">목적</div>
 <p>전수 검사 피로를 줄이고, 비전문가의 검증 리스크를 최소화해요.</p>
 </div>
-<div class="anim bg-surface2 bd r-8 italic fg-dim kw lh-15 pad-12-16 fs-body-sm"><span class="fw-700 fg-orange">프롬프트 예시</span><br/>"이 코드의 변경(Diff)을 요약하고, 전역 상태에 영향 줄 잠재 부작용 3가지와 보안 관점 리팩토링 포인트를 제안해."</div>
+<div class="anim bg-surface2 bd r-8 italic fg-dim kw lh-15 pad-12-16 fs-body-sm"><span class="fw-700 fg-orange">프롬프트 예시</span><br/>"이번 변경(Diff)을 요약하고, 이게 다른 화면·기능에 영향 줄 만한 부분 3가지와 빠진 예외 케이스를 짚어줘."</div>
 </div>
 </div>
 </div>
