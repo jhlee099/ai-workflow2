@@ -3447,11 +3447,8 @@ AI가 실행을 맡으면, 판단의 질이 곧 결과물의 질이에요.
 
   show(0);
 
-  // 첫 진입 네비 힌트 (한 번만 표시)
+  // 진입 네비 힌트 (매 방문마다 표시, 조작 시작하면 일찍 사라짐)
   (function navHint() {
-    try {
-      if (localStorage.getItem('deck-hint-seen') === '1') return;
-    } catch (e) { /* localStorage 차단 환경 — 그래도 한 번은 보여주기 */ }
     const isTouch = ('ontouchstart' in window) || navigator.maxTouchPoints > 0;
     const hint = document.createElement('div');
     hint.className = 'nav-hint';
@@ -3461,17 +3458,19 @@ AI가 실행을 맡으면, 판단의 질이 곧 결과물의 질이에요.
     hint.innerHTML = (isTouch ? swipe + ' 또는 ' + keys : keys + ' 또는 ' + swipe) + '로 넘기세요';
     document.body.appendChild(hint);
     setTimeout(() => hint.classList.add('visible'), 400);
-    setTimeout(() => hint.classList.remove('visible'), 4200);
-    setTimeout(() => hint.remove(), 4900);
-    const markSeen = () => {
-      try { localStorage.setItem('deck-hint-seen', '1'); } catch (e) {}
-      document.removeEventListener('click', markSeen, true);
-      document.removeEventListener('keydown', markSeen, true);
-      document.removeEventListener('touchstart', markSeen, true);
+    let removed = false;
+    const dismiss = () => {
+      if (removed) return; removed = true;
+      hint.classList.remove('visible');
+      setTimeout(() => hint.remove(), 500);
+      document.removeEventListener('click', dismiss, true);
+      document.removeEventListener('keydown', dismiss, true);
+      document.removeEventListener('touchstart', dismiss, true);
     };
-    document.addEventListener('click', markSeen, true);
-    document.addEventListener('keydown', markSeen, true);
-    document.addEventListener('touchstart', markSeen, true);
+    setTimeout(dismiss, 4200); // 조작 없으면 약 4초 후 자동 사라짐
+    document.addEventListener('click', dismiss, true);
+    document.addEventListener('keydown', dismiss, true);
+    document.addEventListener('touchstart', dismiss, true);
   })();
 
   // 초기 표지 bg 강제 적용 (show early return 우회)
