@@ -3303,14 +3303,13 @@ AI가 실행을 맡으면, 판단의 질이 곧 결과물의 질이에요.
   let deckRotated = false;
   function fitDeck() {
     const w = window.innerWidth, h = window.innerHeight;
-    deckRotated = h > w; // 세로 화면 → 콘텐츠를 가로로 90° 회전해 꽉 채움
+    // Figma "Fit"(contain): 잘림 없이 전체가 보이도록 min(). 하한 없음.
+    // 정방향 vs 90도 회전 중 더 크게 들어가는 방향을 자동 선택 → 어떤 극단 비율도 대응.
+    const sNorm = Math.min(w / 1280, h / 720);
+    const sRot  = Math.min(w / 720, h / 1280);
     let scale, rot = '';
-    if (deckRotated) {
-      scale = Math.min(w / 720, h / 1280) * 1.1;
-      rot = ' rotate(90deg)';
-    } else {
-      scale = Math.min(w / 1280, h / 720) * 1.1;
-    }
+    if (sRot > sNorm) { scale = sRot; rot = ' rotate(90deg)'; deckRotated = true; }
+    else { scale = sNorm; deckRotated = false; }
     deck.style.transform = 'translate(-50%, -50%) scale(' + scale + ')' + rot;
     slideNumEl.style.fontSize = Math.round(11 * scale) + 'px';
   }
