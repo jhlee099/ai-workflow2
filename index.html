@@ -1082,9 +1082,14 @@
     opacity: 0.85;
     transform: translateX(-50%) translateY(0);
   }
-  /* 세로(회전) 화면에선 힌트도 콘텐츠와 같이 90° 회전 */
-  .nav-hint.rot { transform: translateX(-50%) translateY(8px) rotate(90deg); }
-  .nav-hint.rot.visible { transform: translateX(-50%) translateY(0) rotate(90deg); }
+  /* 세로(회전) 화면: 힌트도 90° 회전 + 콘텐츠의 '하단'(=화면 왼쪽 모서리)으로 이동 */
+  .nav-hint.rot {
+    left: 0; right: auto; top: 50%; bottom: auto;
+    transform: translateX(-50%) translateY(-50%) translateX(16px) rotate(90deg);
+  }
+  .nav-hint.rot.visible {
+    transform: translateX(-50%) translateY(-50%) translateX(30px) rotate(90deg);
+  }
   .nav-hint .nh-key {
     background: rgba(255,255,255,0.18);
     padding: 2px 8px;
