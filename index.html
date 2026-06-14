@@ -7,6 +7,19 @@
 <meta name="theme-color" content="#f7f7f5"/>
 <title>AI로 일하는 IT 실무자의 다음 시대</title>
 <meta name="description" content="AI 워크플로우 실전 강연 — 판단은 사람이, 실행은 AI가. 맥락 부여부터 운영까지 7단계 워크플로우와 실전 팁 8가지."/>
+<!-- 공유 미리보기 (OG / Twitter) -->
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="AI로 일하는 IT 실무자의 다음 시대"/>
+<meta property="og:description" content="판단은 사람이, 실행은 AI가. Claude Code로 시작하는 실무 워크플로우와 실전 팁 8가지."/>
+<meta property="og:image" content="https://ai-lecture-public.vercel.app/og-image.png"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta property="og:url" content="https://ai-lecture-public.vercel.app/"/>
+<meta property="og:locale" content="ko_KR"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="AI로 일하는 IT 실무자의 다음 시대"/>
+<meta name="twitter:description" content="판단은 사람이, 실행은 AI가. Claude Code로 시작하는 실무 워크플로우와 실전 팁 8가지."/>
+<meta name="twitter:image" content="https://ai-lecture-public.vercel.app/og-image.png"/>
 <style>
   :root {
     --bg:       #f7f7f5;
@@ -104,14 +117,16 @@
     pointer-events: auto;
   }
 
-  /* 진행 바 */
+  /* 진행 바 (상단 고정) */
   .progress-bar {
-    position: absolute;
-    bottom: 0; left: 0;
+    position: fixed;
+    top: 0; left: 0;
+    width: 0;
     height: 3px;
     background: linear-gradient(90deg, var(--orange), var(--amber));
-    transition: width 0.3s ease;
+    transition: width 0.35s ease;
     z-index: 10000;
+    pointer-events: none;
   }
 
   /* 슬라이드 번호 — deck 밖 fixed, 디바이스 우측하단 */
@@ -128,6 +143,36 @@
     transition: color 0.15s;
   }
   .slide-num:hover { color: var(--orange); }
+  /* 세로(회전) 화면: 슬라이드 번호도 회전 + 콘텐츠의 우하단(=화면 좌하단)으로 */
+  .slide-num.rot {
+    bottom: 42px; right: auto; left: 6px; top: auto;
+    transform: rotate(90deg);
+    transform-origin: center;
+  }
+
+  /* 스낵바(토스트) */
+  .toast {
+    position: fixed;
+    left: 50%; bottom: 40px;
+    transform: translateX(-50%) translateY(12px);
+    max-width: 86vw;
+    background: rgba(20, 18, 14, 0.92);
+    color: #f5f2ec;
+    font-size: 14px; font-weight: 500;
+    padding: 13px 20px; border-radius: 12px;
+    box-shadow: 0 6px 24px rgba(0,0,0,0.2);
+    z-index: 10003;
+    opacity: 0; pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    text-align: center; line-height: 1.5;
+  }
+  .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+  /* 모션 최소화 선호 시 애니메이션 끔 (접근성) */
+  @media (prefers-reduced-motion: reduce) {
+    .slide.active .anim { animation: none !important; }
+    .slide, .progress-bar, .nav-hint, .toast { transition: none !important; }
+  }
 
   /* ── 타이포 ── */
   .eyebrow {
@@ -3311,6 +3356,8 @@ AI가 실행을 맡으면, 판단의 질이 곧 결과물의 질이에요.
 </div>
 </div>
 <div class="slide-num" id="slideNum">1 / —</div>
+<div class="progress-bar" id="progressBar"></div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
 <script>
   const deck = document.getElementById('deck');
 
@@ -3330,8 +3377,7 @@ AI가 실행을 맡으면, 판단의 질이 곧 결과물의 질이에요.
     deck.style.transform = 'translate(-50%, -50%) scale(' + scale + ')' + rot;
     slideNumEl.style.fontSize = Math.round(11 * scale) + 'px';
     deck.style.visibility = 'visible'; // 스케일 적용 후 노출
-    const nh = document.querySelector('.nav-hint'); // 힌트도 콘텐츠와 같은 회전 상태로
-    if (nh) nh.classList.toggle('rot', deckRotated);
+    slideNumEl.classList.toggle('rot', deckRotated); // 슬라이드 번호도 콘텐츠와 같은 회전
   }
   fitDeck();
   let _resizeTimer;
@@ -3356,13 +3402,20 @@ AI가 실행을 맡으면, 판단의 질이 곧 결과물의 질이에요.
   let scriptVisible = false;
 
   // 페이지 카운터 클릭 → 마지막 슬라이드로 이동
-  document.getElementById('slideNum').addEventListener('click', () => show(total - 1));
+  document.getElementById('slideNum').addEventListener('click', (e) => { e.stopPropagation(); show(total - 1); });
 
+  function updateChrome() {
+    document.getElementById('slideNum').textContent = (cur + 1) + ' / ' + total;
+    const pb = document.getElementById('progressBar');
+    if (pb) pb.style.width = ((cur + 1) / total * 100) + '%';
+    // 접근성: 현재 슬라이드만 스크린리더에 노출
+    slides.forEach((s, i) => s.setAttribute('aria-hidden', i === cur ? 'false' : 'true'));
+  }
   function show(idx) {
     const next = Math.max(0, Math.min(idx, total - 1));
     if (next === cur && slides[cur].classList.contains('active')) {
       // 초기 호출 시 이미 active면 remove 없이 진행
-      document.getElementById('slideNum').textContent = (cur + 1) + ' / ' + total;
+      updateChrome();
       if (scriptVisible) updateScriptText();
       return;
     }
@@ -3386,7 +3439,7 @@ AI가 실행을 맡으면, 판단의 질이 곧 결과물의 질이에요.
       const slideBg = getComputedStyle(slides[cur]).backgroundColor;
       document.body.style.background = (slideBg && slideBg !== transparent) ? slideBg : fallbackBg;
     }
-    document.getElementById('slideNum').textContent = (cur + 1) + ' / ' + total;
+    updateChrome();
 
     // 슬라이드 전환 시 스크립트 힌트 텍스트 업데이트
     if (scriptVisible) updateScriptText();
@@ -3430,9 +3483,18 @@ AI가 실행을 맡으면, 판단의 질이 곧 결과물의 질이에요.
     }
     return false;
   }
-  // 클릭 슬라이드 전환 비활성화 — 키보드(←/→)와 스와이프만 사용
+  // 클릭/탭으로 전환 — 좌측 절반=이전, 우측 절반=다음 (회전 시 세로축으로 매핑)
+  function navByPosition(clientX, clientY) {
+    const pos = deckRotated ? (clientY / window.innerHeight) : (clientX / window.innerWidth);
+    if (pos < 0.5) go(-1); else go(1);
+  }
+  // 데스크탑 마우스 클릭 (터치 탭은 touchend에서 처리하고 합성 click은 억제됨)
+  document.addEventListener('click', e => {
+    if (isInteractive(e.target)) return;
+    navByPosition(e.clientX, e.clientY);
+  });
 
-  // 스와이프 — 모바일/터치 디바이스
+  // 스와이프 + 탭 — 모바일/터치
   let touchStartX = 0, touchStartY = 0, touchStartT = 0;
   document.addEventListener('touchstart', e => {
     if (e.touches.length !== 1) return;
@@ -3446,47 +3508,42 @@ AI가 실행을 맡으면, 판단의 질이 곧 결과물의 질이에요.
     const dx = t.clientX - touchStartX;
     const dy = t.clientY - touchStartY;
     const dt = Date.now() - touchStartT;
-    // 일정 거리 + 1초 이내 → 스와이프로 간주 (회전 시엔 세로 스와이프가 좌우 역할)
-    if (deckRotated) {
-      if (Math.abs(dy) > 50 && Math.abs(dy) > Math.abs(dx) * 1.5 && dt < 800) {
-        e.preventDefault();
-        if (dy < 0) go(1); else go(-1);
-      }
-    } else if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy) * 1.5 && dt < 800) {
-      e.preventDefault();
-      if (dx < 0) go(1); else go(-1);
+    const moved = Math.max(Math.abs(dx), Math.abs(dy));
+    if (dt > 1200) return;          // 길게 누름은 무시
+    e.preventDefault();             // 합성 click 억제 → 탭 중복 방지
+    if (moved > 35) {               // 스와이프 (회전 시 세로축이 좌우 역할)
+      const horiz = deckRotated ? (Math.abs(dy) >= Math.abs(dx)) : (Math.abs(dx) >= Math.abs(dy));
+      const d = deckRotated ? dy : dx;
+      if (horiz) { if (d < 0) go(1); else go(-1); }
+    } else {                        // 탭 → 위치로 이전/다음
+      navByPosition(t.clientX, t.clientY);
     }
-    // 짧은 탭은 click 핸들러가 처리
   }, { passive: false });
 
   show(0);
 
-  // 진입 네비 힌트 (매 방문마다 표시, 조작 시작하면 일찍 사라짐)
-  (function navHint() {
-    const isTouch = ('ontouchstart' in window) || navigator.maxTouchPoints > 0;
-    const hint = document.createElement('div');
-    hint.className = 'nav-hint';
-    // 하이브리드 기기(터치+키보드)도 틀리지 않게 둘 다 안내, 기기상 더 쓸 법한 방법을 앞에
-    const swipe = '👆 <b>스와이프</b>';
-    const keys = '<span class="nh-key">←</span><span class="nh-key">→</span> <b>키</b>';
-    hint.innerHTML = (isTouch ? swipe + ' 또는 ' + keys : keys + ' 또는 ' + swipe) + '로 넘기세요';
-    if (deckRotated) hint.classList.add('rot'); // 세로면 콘텐츠와 같이 회전
-    document.body.appendChild(hint);
-    setTimeout(() => hint.classList.add('visible'), 400);
-    let removed = false;
-    const dismiss = () => {
-      if (removed) return; removed = true;
-      hint.classList.remove('visible');
-      setTimeout(() => hint.remove(), 500);
-      document.removeEventListener('click', dismiss, true);
-      document.removeEventListener('keydown', dismiss, true);
-      document.removeEventListener('touchstart', dismiss, true);
-    };
-    setTimeout(dismiss, 4200); // 조작 없으면 약 4초 후 자동 사라짐
-    document.addEventListener('click', dismiss, true);
-    document.addEventListener('keydown', dismiss, true);
-    document.addEventListener('touchstart', dismiss, true);
-  })();
+  // (네비 힌트 제거 — 클릭/탭으로 넘어가 직관적이라 안내 불필요)
+
+  // 스낵바(토스트)
+  let _toastT;
+  function showToast(msg) {
+    const el = document.getElementById('toast');
+    if (!el) return;
+    el.textContent = msg;
+    el.classList.add('show');
+    clearTimeout(_toastT);
+    _toastT = setTimeout(() => el.classList.remove('show'), 2800);
+  }
+  // 스타터킷 버튼(href 없는 내부 자산) → 클릭 시 안내 스낵바
+  document.querySelectorAll('a').forEach(a => {
+    if (!a.getAttribute('href') && /스타터킷/.test(a.textContent)) {
+      a.style.cursor = 'pointer';
+      a.addEventListener('click', e => {
+        e.preventDefault(); e.stopPropagation();
+        showToast('사내용으로 제작한 자산이라 외부에는 공개하지 않아요 🙏');
+      });
+    }
+  });
 
   // 초기 표지 bg 강제 적용 (show early return 우회)
   { const transparent='rgba(0, 0, 0, 0)';
