@@ -5,7 +5,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>AI로 일하는 IT 실무자의 다음 시대</title>
-<meta name="description" content="AI 워크플로우 실전 강연 — 판단은 사람이, 실행은 AI가. 맥락 부여부터 운영까지 7단계 워크플로우와 실전 팁 12가지."/>
+<meta name="description" content="AI 워크플로우 실전 강연 — 판단은 사람이, 실행은 AI가. 맥락 부여부터 운영까지 7단계 워크플로우와 실전 팁 8가지."/>
 <style>
   :root {
     --bg:       #f7f7f5;
@@ -204,7 +204,6 @@
   .key-line {
     background: var(--orange-bg);
     border: 2px solid var(--orange-br);
-    border-left: 6px solid var(--orange);
     border-radius: 10px;
     padding: 20px 24px;
     font-size: clamp(20px,26px,28px);
@@ -1036,10 +1035,10 @@
   .pad-18-22 { padding: 18px 22px; }
   .pad-8-0   { padding: 8px 0; }
 
-  /* 좌측 강조 보더 */
-  .bd-l-orange { border-left: 4px solid var(--orange); }
-  .bd-l-good   { border-left: 4px solid var(--good-fg); }
-  .bd-l-bad    { border-left: 4px solid var(--bad-fg); }
+  /* 좌측 강조 보더 (공개본: 제거) */
+  .bd-l-orange { border-left: 1px solid var(--border); }
+  .bd-l-good   { border-left: 1px solid var(--border); }
+  .bd-l-bad    { border-left: 1px solid var(--border); }
 
   /* 1.5px 강조 보더 */
   .bd-15-orange { border: 1.5px solid var(--orange-br); }
@@ -1102,7 +1101,7 @@
   /* 챕터 간지 공통 */
   .chapter-lounge {
     position: absolute;
-    bottom: 28px;
+    bottom: 44px;
     left: 50%;
     transform: translateX(-50%);
     display: inline-flex;
@@ -1267,7 +1266,7 @@
 
 <div style="font-size:28px;font-weight:900;color:var(--orange);display:flex;align-items:center;justify-content:center;">→</div>
 
-<div style="padding:28px 32px;border-radius:16px;background:var(--surface);border:1px solid var(--border);border-left:4px solid var(--orange);display:flex;flex-direction:column;justify-content:center;gap:12px;">
+<div style="padding:28px 32px;border-radius:16px;background:var(--surface);border:1px solid var(--border);border-left:1px solid var(--border);display:flex;flex-direction:column;justify-content:center;gap:12px;">
 <div style="font-size:12px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--orange);">ToBe · 앞으로</div>
 <div style="display:flex;flex-direction:column;gap:6px;text-align:left;">
 <div style="font-size:clamp(17px,20px,21px);font-weight:700;color:var(--ink);">AI에 <span style="color:var(--orange);">위임</span>하고 내가 검증해요</div>
@@ -1307,7 +1306,7 @@
 </div>
 <div style="display:flex;flex-direction:column;">
 <div class="vs-label" style="color:var(--orange);font-weight:700;">AI 활용 (사용법 + 사고방식)</div>
-<div class="card" style="flex:1;background:var(--surface);border-color:var(--border);border-left:4px solid var(--orange);padding:28px 32px;">
+<div class="card" style="flex:1;background:var(--surface);border-color:var(--border);border-left:1px solid var(--border);padding:28px 32px;">
 <div class="card-title" style="color:var(--orange);font-size:clamp(16px,20px,20px);">사용법 + 일하는 방식을 바꿔야 해요</div>
 <p style="color:var(--ink-dim);font-size:clamp(15px,17px,18px);line-height:1.6;margin-top:8px;margin-bottom:12px;">도구 사용법도 익혀야 하고, 일하는 방식 자체가 바뀌어야 해요.<br/>그래서 초반 허들이 커요.</p>
 <div style="display:flex;flex-wrap:wrap;gap:6px;">
@@ -1497,11 +1496,11 @@ AI가 실행을 맡으면, 판단의 질이 곧 결과물의 질이에요.
 <div class="fi on" style="font-size:clamp(15px,19px,19px);padding:10px 18px;">운영</div>
 </div>
 <div class="demo-row anim" style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
-<div class="card" style="border-left:4px solid var(--orange);">
+<div class="card" style="border-left:1px solid var(--border);">
 <div class="card-title" style="color:var(--orange);">처음부터 끝까지</div>
 <p>아이디어 단계부터 Confluence 업로드, QA까지 AI가 끊기지 않고 연결돼요. 중간에 수동 작업이 없어요.</p>
 </div>
-<div class="card" style="border-left:4px solid var(--orange);">
+<div class="card" style="border-left:1px solid var(--border);">
 <div class="card-title" style="color:var(--orange);">내가 하는 것</div>
 <p>방향 잡기, 피드백, 최종 결정. 실행에 쓰던 시간이 판단으로 바뀌어요. <span class="em">다음 슬라이드부터 하나씩 열게요.</span></p>
 </div>
@@ -1545,8 +1544,8 @@ AI가 실행을 맡으면, 판단의 질이 곧 결과물의 질이에요.
 </div>
 <div class="wf-demo-label anim">예시</div>
 <div class="wf-demo-row anim">
-<a class="wf-demo-link" target="_blank" rel="noopener noreferrer"><svg class="wf-demo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg><span class="wf-demo-text">시장 리서치</span></a>
-<a class="wf-demo-link" target="_blank" rel="noopener noreferrer"><svg class="wf-demo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg><span class="wf-demo-text">데이터 및 가설</span></a>
+<a class="wf-demo-link" target="_blank" rel="noopener noreferrer"><svg class="wf-demo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg><span class="wf-demo-text"><span class="rd">시장 리서치</span></span></a>
+<a class="wf-demo-link" target="_blank" rel="noopener noreferrer"><svg class="wf-demo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg><span class="wf-demo-text"><span class="rd">데이터 및 가설</span></span></a>
 </div>
 </div>
 
@@ -1576,8 +1575,8 @@ AI가 실행을 맡으면, 판단의 질이 곧 결과물의 질이에요.
 </div>
 <div class="wf-demo-label anim">예시</div>
 <div class="wf-demo-row anim">
-<a class="wf-demo-link" target="_blank" rel="noopener noreferrer"><svg class="wf-demo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg><span class="wf-demo-text">뾰족하지 않은 기획 초안</span></a>
-<a class="wf-demo-link" target="_blank" rel="noopener noreferrer"><svg class="wf-demo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg><span class="wf-demo-text">초안의 낮은 퀄리티 확인</span></a>
+<a class="wf-demo-link" target="_blank" rel="noopener noreferrer"><svg class="wf-demo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg><span class="wf-demo-text"><span class="rd">뾰족하지 않은 기획 초안</span></span></a>
+<a class="wf-demo-link" target="_blank" rel="noopener noreferrer"><svg class="wf-demo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg><span class="wf-demo-text"><span class="rd">초안의 낮은 퀄리티 확인</span></span></a>
 </div>
 </div>
 
@@ -1638,8 +1637,8 @@ AI가 실행을 맡으면, 판단의 질이 곧 결과물의 질이에요.
 <div class="anim mt-12 fs-body fg-dimmer t-center">※ Description은 자산화를 위해 수기로 Figma에 업데이트하고 있어요.</div>
 <div class="wf-demo-label anim">예시</div>
 <div class="wf-demo-row anim">
-<a class="wf-demo-link" target="_blank" rel="noopener noreferrer"><svg class="wf-demo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg><span class="wf-demo-text">최종 스펙 정책 1</span></a>
-<a class="wf-demo-link" target="_blank" rel="noopener noreferrer"><svg class="wf-demo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg><span class="wf-demo-text">최종 스펙 정책 2</span></a>
+<a class="wf-demo-link" target="_blank" rel="noopener noreferrer"><svg class="wf-demo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg><span class="wf-demo-text"><span class="rd">최종 스펙 정책 1</span></span></a>
+<a class="wf-demo-link" target="_blank" rel="noopener noreferrer"><svg class="wf-demo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg><span class="wf-demo-text"><span class="rd">최종 스펙 정책 2</span></span></a>
 </div>
 </div>
 
@@ -1669,8 +1668,8 @@ AI가 실행을 맡으면, 판단의 질이 곧 결과물의 질이에요.
 </div>
 <div class="wf-demo-label anim">예시</div>
 <div class="wf-demo-row anim">
-<a class="wf-demo-link" target="_blank" rel="noopener noreferrer"><svg class="wf-demo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg><span class="wf-demo-text">템플릿 컬러 배정</span></a>
-<a class="wf-demo-link" target="_blank" rel="noopener noreferrer"><svg class="wf-demo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg><span class="wf-demo-text">주기적인 웹 리서치</span></a>
+<a class="wf-demo-link" target="_blank" rel="noopener noreferrer"><svg class="wf-demo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg><span class="wf-demo-text"><span class="rd">템플릿 컬러 배정</span></span></a>
+<a class="wf-demo-link" target="_blank" rel="noopener noreferrer"><svg class="wf-demo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg><span class="wf-demo-text"><span class="rd">주기적인 웹 리서치</span></span></a>
 </div>
 </div>
 
@@ -2922,20 +2921,16 @@ AI가 실행을 맡으면, 판단의 질이 곧 결과물의 질이에요.
 
 
 <div class="slide p-0 ai-center" id="s-tip-divider">
-<svg class="w-full pos-abs inset-0 h-full pe-none" aria-hidden="true" preserveAspectRatio="xMidYMid slice" style="opacity:0.12;" viewBox="0 0 1200 700">
-<circle cx="600" cy="350" fill="none" r="320" stroke="#c96500" stroke-dasharray="10 7" stroke-width="2.5"></circle>
-<circle cx="600" cy="350" fill="none" r="210" stroke="#c96500" stroke-width="2"></circle>
-<circle cx="600" cy="350" fill="none" r="110" stroke="#c96500" stroke-width="1.5"></circle>
-</svg>
+<svg class="w-full pos-abs inset-0 h-full pe-none" aria-hidden="true" preserveAspectRatio="xMidYMid slice" style="opacity:0.12;" viewBox="0 0 1200 700"><circle cx="600" cy="350" fill="none" r="320" stroke="#c96500" stroke-dasharray="10 7" stroke-width="2.5"></circle><circle cx="600" cy="350" fill="none" r="210" stroke="#c96500" stroke-width="2"></circle><circle cx="600" cy="350" fill="none" r="110" stroke="#c96500" stroke-width="1.5"></circle></svg>
 <div class="t-center pos-rel" style="max-width:800px;">
 <div class="eyebrow anim mb-16">Part 3</div>
 <h1 class="anim ls-tight3 fs-hero-xl" style="line-height:1.0; margin:0 0 28px;">실전 팁</h1>
-<p class="lead anim t-center fg-dim fs-title" style="max-width:600px; margin:0 auto 32px;">직접 쓰면서 정리한 12가지, 4가지 카테고리</p>
+<p class="lead anim t-center fg-dim fs-title" style="max-width:600px; margin:0 auto 32px;">직접 쓰면서 정리한 8가지, 4가지 카테고리</p>
 <div class="anim row g-10 flex-wrap jc-center">
-<div class="bg-surface fs-body fg-dim fw-600 r-pill bd pad-10-18">세팅·맥락</div>
-<div class="bg-surface fs-body fg-dim fw-600 r-pill bd pad-10-18">POC·기획</div>
-<div class="bg-surface fs-body fg-dim fw-600 r-pill bd pad-10-18">디자인</div>
-<div class="bg-warn fs-body fg-orange fw-700 r-pill bd-orange pad-10-18">효율·자동화</div>
+<div class="bg-surface fs-body fg-dim fw-600 r-pill bd pad-10-18">진입·환경</div>
+<div class="bg-surface fs-body fg-dim fw-600 r-pill bd pad-10-18">맥락·기획</div>
+<div class="bg-surface fs-body fg-dim fw-600 r-pill bd pad-10-18">실행·고도화</div>
+<div class="bg-warn fs-body fg-orange fw-700 r-pill bd-orange pad-10-18">검증·운영</div>
 </div>
 </div>
 <div class="chapter-lounge"><span class="cl-icon">#</span>막힐 때는 슬랙 <a class="cl-link" target="_blank"><span class="rd">█████</span></a> 채널에 편하게 물어보세요</div>
@@ -2943,14 +2938,12 @@ AI가 실행을 맡으면, 판단의 질이 곧 결과물의 질이에요.
 
 
 <div class="slide p-0" id="s-tip-g-setup">
-<svg class="w-full pos-abs inset-0 h-full pe-none" aria-hidden="true" preserveAspectRatio="xMidYMid slice" style="opacity:0.05;" viewBox="0 0 1200 700">
-<circle cx="600" cy="350" fill="none" r="260" stroke="#c96500" stroke-dasharray="6 5" stroke-width="1.5"></circle>
-</svg>
+<svg class="w-full pos-abs inset-0 h-full pe-none" aria-hidden="true" preserveAspectRatio="xMidYMid slice" style="opacity:0.05;" viewBox="0 0 1200 700"><circle cx="600" cy="350" fill="none" r="260" stroke="#c96500" stroke-dasharray="6 5" stroke-width="1.5"></circle></svg>
 <div class="row stack ai-center jc-center t-center g-12 pos-abs inset-0">
 <div class="eyebrow anim">팁 카테고리 1 / 4</div>
-<h2 class="anim ls-tight3 fs-hero lh-11">세팅 · 맥락</h2>
+<h2 class="anim ls-tight3 fs-hero lh-11">진입 · 환경</h2>
 <div class="anim r-pill h-2px bg-border2" style="width:48px;"></div>
-<p class="lead anim t-center fs-title m-0-auto" style="max-width:560px;">초기 1회 설정으로 이후 작업 속도가 달라지는 팁들이에요.</p>
+<p class="lead anim t-center fs-title m-0-auto" style="max-width:560px;">AI에게 맡기기 전, 안전장치부터 세팅해요.</p>
 </div>
 </div>
 
@@ -2958,25 +2951,26 @@ AI가 실행을 맡으면, 판단의 질이 곧 결과물의 질이에요.
 <div class="slide ai-center slide-pad" id="s-tip1">
 <div class="two-col mw-content">
 <div class="left">
-<div class="eyebrow anim">팁 1 / 12</div>
+<div class="eyebrow anim">팁 1 / 8</div>
 <div class="anim row ai-center g-18 mb-16">
 <div class="tip-badge">1</div>
-<h2 class="fs-display fw-800 fg-ink kw ls-tight2">폴더 구조 +<br/>CLAUDE.md 먼저</h2>
+<h2 class="fs-display fw-800 fg-ink kw ls-tight2">테스트 브랜치 격리 +<br/>데스크톱 앱 병행</h2>
 </div>
 <div class="key-line anim">
-          CLAUDE.md가 없으면<br/>Claude는 매번 폴더 전체를 뒤져요
+          AI 작업 전 반드시 분리 브랜치부터.<br/>터미널이 낯설면 데스크톱 앱을 옆에 띄워요
         </div>
-<p class="lead anim fs-lead mt-16">Claude Code를 처음 켜기 전에 이 두 가지를 먼저 세팅하면, 이후 모든 작업이 훨씬 빠르고 정확해져요.</p>
+<p class="lead anim fs-lead mt-16">자율 에이전트의 오작동으로 인한 소스 유실을 막고, 터미널 진입장벽도 함께 낮추는 첫 단추예요.</p>
 </div>
-<div class="row stack g-20">
+<div class="row stack g-16">
 <div class="card anim bg-warn bc-orange">
-<div class="card-title">CLAUDE.md에 넣을 것</div>
-<p>프로젝트 개요, 주제별 참조 파일 경로, 라우팅 표. 이 세 가지만 있어도 Claude가 필요한 파일만 골라서 읽어요. 불필요한 읽기 = 토큰 낭비.</p>
+<div class="card-title">지침</div>
+<p>작업 시작 전 독립 브랜치를 먼저 만들어요(<span class="em">git checkout -b feature/ai-test</span>). 터미널이 낯설면 Claude 데스크톱 앱을 옆에 띄워 명령어·에러를 실시간으로 물어보며 진행해요.</p>
 </div>
 <div class="card anim">
-<div class="card-title">시작 명령어</div>
-<p>"Claude Code 잘 활용하는 방법 리서치해서 내 폴더 구조에 적용할 계획 세워" — 이 한 문장으로 시작하면 Claude가 구조를 제안해줘요.</p>
+<div class="card-title">목적</div>
+<p>에이전트가 오작동해도 메인 코드는 안전하게 지키고, 터미널이 처음이어도 바로 시작할 수 있어요.</p>
 </div>
+<div class="anim bg-surface2 bd r-8 italic fg-dim kw lh-15 pad-12-16 fs-body-sm"><span class="fw-700 fg-orange">프롬프트 예시</span><br/>"클로드코드 실행 중 이런 에러가 났어. 터미널에 어떤 명령어를 입력하면 되는지 코드만 알려줘."</div>
 </div>
 </div>
 </div>
@@ -2985,43 +2979,66 @@ AI가 실행을 맡으면, 판단의 질이 곧 결과물의 질이에요.
 <div class="slide ai-center slide-pad" id="s-tip2">
 <div class="two-col mw-content">
 <div class="left">
-<div class="eyebrow anim">팁 2 / 12</div>
+<div class="eyebrow anim">팁 2 / 8</div>
 <div class="anim row ai-center g-18 mb-16">
 <div class="tip-badge">2</div>
-<h2 class="fs-display fw-800 fg-ink kw ls-tight2">메모리 파일<br/>압축 규칙</h2>
+<h2 class="fs-display fw-800 fg-ink kw ls-tight2">에이전트 무한 루프 ·<br/>비용 제어</h2>
 </div>
 <div class="key-line anim">
-          50줄 초과 시 "압축해줘"<br/>— 메모리도 관리가 필요해요
+          에러 3회 → 자율 디버깅 중단.<br/>무한 루프가 토큰을 태워요
         </div>
-<p class="lead anim fs-lead mt-16">메모리 파일은 방치하면 비대해지고, 커질수록 매 요청마다 토큰을 잡아먹으니 주기적으로 압축해야 해요.</p>
+<p class="lead anim fs-lead mt-16">에이전트가 잘못된 추론 경로에 빠져 코드를 무한 수정하면, API 비용이 순식간에 새어나가요.</p>
 </div>
-<div class="row stack g-20">
+<div class="row stack g-16">
 <div class="card anim bg-warn bc-orange">
-<div class="card-title">압축 규칙</div>
-<ul class="list mt-8">
-<li class="fs-body pad-8-0"><span class="dot"></span><span><span class="em">50줄 초과</span> 시 제자리 요약</span></li>
-<li class="fs-body pad-8-0"><span class="dot"></span><span>여전히 초과 시 오래된 2/3를 '창고' 폴더로 이동</span></li>
-<li class="fs-body pad-8-0" style="border-bottom:none;"><span class="dot"></span><span>창고는 필요할 때만 "창고 참고해줘"</span></li>
-</ul>
+<div class="card-title">지침</div>
+<p>최대 실행 단계를 제한하거나, 초기 프롬프트 첫머리에 <span class="em">자율 디버깅 한도</span>를 명시해 둬요.</p>
 </div>
 <div class="card anim">
-<div class="card-title">명령어</div>
-<p>"메모리 파일 정리해줘. 50줄 넘으면 압축하고 오래된 건 archive로." — 이 한 줄로 Claude가 처리해요.</p>
+<div class="card-title">목적</div>
+<p>오작동 추론 경로에서 코드를 무한 반복 수정하며 비용이 과다 지출되는 걸 차단해요.</p>
 </div>
+<div class="anim bg-surface2 bd r-8 italic fg-dim kw lh-15 pad-12-16 fs-body-sm"><span class="fw-700 fg-orange">프롬프트 예시</span><br/>"빌드·런타임 에러가 3회 연속 나면 자율 디버깅을 즉시 멈추고, 에러 로그와 예상 원인을 정리해 내 판단을 기다려."</div>
 </div>
 </div>
 </div>
 
 
 <div class="slide p-0" id="s-tip-g-poc">
-<svg class="w-full pos-abs inset-0 h-full pe-none" aria-hidden="true" preserveAspectRatio="xMidYMid slice" style="opacity:0.05;" viewBox="0 0 1200 700">
-<circle cx="600" cy="350" fill="none" r="260" stroke="#c96500" stroke-dasharray="6 5" stroke-width="1.5"></circle>
-</svg>
+<svg class="w-full pos-abs inset-0 h-full pe-none" aria-hidden="true" preserveAspectRatio="xMidYMid slice" style="opacity:0.05;" viewBox="0 0 1200 700"><circle cx="600" cy="350" fill="none" r="260" stroke="#c96500" stroke-dasharray="6 5" stroke-width="1.5"></circle></svg>
 <div class="row stack ai-center jc-center t-center g-12 pos-abs inset-0">
 <div class="eyebrow anim">팁 카테고리 2 / 4</div>
-<h2 class="anim ls-tight3 fs-hero lh-11">POC · 기획</h2>
+<h2 class="anim ls-tight3 fs-hero lh-11">맥락 · 기획</h2>
 <div class="anim r-pill h-2px bg-border2" style="width:48px;"></div>
-<p class="lead anim t-center fs-title m-0-auto" style="max-width:560px;">POC 먼저, 기획서는 나중에. 실전 흐름이에요.</p>
+<p class="lead anim t-center fs-title m-0-auto" style="max-width:560px;">맥락을 자산으로 만들고, 구조로 전달해요.</p>
+</div>
+</div>
+
+
+<div class="slide ai-center slide-pad" id="s-tip3">
+<div class="two-col mw-content">
+<div class="left">
+<div class="eyebrow anim">팁 3 / 8</div>
+<div class="anim row ai-center g-18 mb-16">
+<div class="tip-badge">3</div>
+<h2 class="fs-display fw-800 fg-ink kw ls-tight2">단일 참조 파일로<br/>맥락 자산화</h2>
+</div>
+<div class="key-line anim">
+          CLAUDE.md 하나면<br/>세션이 길어져도 안 잊어요
+        </div>
+<p class="lead anim fs-lead mt-16">대화 세션이 길어져도 AI가 초기 기획 의도와 히스토리를 잊지 않게 만드는 장치예요.</p>
+</div>
+<div class="row stack g-16">
+<div class="card anim bg-warn bc-orange">
+<div class="card-title">지침</div>
+<p>루트에 <span class="em">CLAUDE.md</span>를 만들고 [프로젝트 개요 / 데이터 스키마 / 필수 금지 사항]을 구조화해 적어둬요.</p>
+</div>
+<div class="card anim">
+<div class="card-title">목적</div>
+<p>세션이 길어져도 초기 기획 의도와 히스토리를 망각하지 않아요.</p>
+</div>
+<div class="anim bg-surface2 bd r-8 italic fg-dim kw lh-15 pad-12-16 fs-body-sm"><span class="fw-700 fg-orange">프롬프트 예시</span><br/>"작업 시작 전, 루트의 CLAUDE.md 컨텍스트와 금지 규칙을 가장 먼저 읽고 착수해."</div>
+</div>
 </div>
 </div>
 
@@ -3029,34 +3046,38 @@ AI가 실행을 맡으면, 판단의 질이 곧 결과물의 질이에요.
 <div class="slide ai-center slide-pad" id="s-tip4">
 <div class="two-col mw-content">
 <div class="left">
-<div class="eyebrow anim">팁 4 / 12</div>
+<div class="eyebrow anim">팁 4 / 8</div>
 <div class="anim row ai-center g-18 mb-16">
 <div class="tip-badge">4</div>
-<h2 class="fs-display fw-800 fg-ink kw ls-tight2">기획보다<br/>POC 먼저</h2>
+<h2 class="fs-display fw-800 fg-ink kw ls-tight2">워크플로우를<br/>구조로 주입</h2>
 </div>
 <div class="key-line anim">
-          POC 먼저 만들면<br/>기획서 수정 지옥이 없어요
+          줄글 말고 [목적 → UI → 데이터 → 예외]<br/>계층 구조로 주세요
         </div>
-<p class="lead anim fs-lead mt-16">기획서를 먼저 쓰면 글만 보고 판단하게 돼요. POC를 먼저 만들면 사용성 검증이 자연스럽게 따라와요.</p>
+<p class="lead anim fs-lead mt-16">직무 경계가 흐려질수록, 실무자만의 '판단 기준'을 구조로 명확히 박아넣어야 결과물에 반영돼요.</p>
 </div>
-<div class="row stack g-12">
-<div class="card anim bg-warn pad-16-20 bc-orange">
-<div class="card-title">왜 더 좋냐면</div>
-<p>POC를 만들면서 "이 흐름이 어색하네"가 실제 화면에서 바로 보여요. 기획서 글자만 읽을 땐 못 잡는 것들이에요.</p>
+<div class="row stack g-16">
+<div class="card anim bg-warn bc-orange">
+<div class="card-title">지침</div>
+<p>맥락 부여~세부 기획을 줄글이 아니라 <span class="em">[목적 → 대상 UI → 데이터 흐름 → 예외 처리]</span>의 마크다운 계층 템플릿으로 정돈해 입력해요.</p>
 </div>
-<div class="card anim pad-16-20">
-<div class="card-title">순서</div>
-<p>POC → 흐름 검증 → 기획서 역으로 작성. 검증된 내용이라 기획서도 훨씬 탄탄해져요.</p>
+<div class="card anim">
+<div class="card-title">목적</div>
+<p>실무자의 '판단 기준'을 구조로 박아넣어 결과물에 확실히 반영해요.</p>
 </div>
-<div class="card anim pad-16-20 bd-l-orange">
-<div class="card-title fg-orange">실제 프로덕트에 가까울수록</div>
-<p class="kw">팀 전달·UT·구현 가능성 검증을 한 번에. <span class="em">"Claude Code로 된다 = 실제 개발도 가능"</span></p>
-</div>
-<div class="card anim pad-16-20" style="border-left:4px solid var(--amber);">
-<div class="card-title fg-orange">진짜 혁신은 인터랙션</div>
-<p class="kw">원하는 인터랙션 직접 만들고 → 코드에서 값 추출 → 바로 전달.</p>
+<div class="anim bg-surface2 bd r-8 italic fg-dim kw lh-15 pad-12-16 fs-body-sm"><span class="fw-700 fg-orange">프롬프트 예시</span><br/>"이 마크다운 기획 명세의 규칙과 데이터 흐름을 기반으로 기능을 구현해."</div>
 </div>
 </div>
+</div>
+
+
+<div class="slide p-0" id="s-tip-g-design">
+<svg class="w-full pos-abs inset-0 h-full pe-none" aria-hidden="true" preserveAspectRatio="xMidYMid slice" style="opacity:0.05;" viewBox="0 0 1200 700"><circle cx="600" cy="350" fill="none" r="260" stroke="#c96500" stroke-dasharray="6 5" stroke-width="1.5"></circle></svg>
+<div class="row stack ai-center jc-center t-center g-12 pos-abs inset-0">
+<div class="eyebrow anim">팁 카테고리 3 / 4</div>
+<h2 class="anim ls-tight3 fs-hero lh-11">실행 · 고도화</h2>
+<div class="anim r-pill h-2px bg-border2" style="width:48px;"></div>
+<p class="lead anim t-center fs-title m-0-auto" style="max-width:560px;">초안→역질문으로 빠르게, 제약으로 단단하게.</p>
 </div>
 </div>
 
@@ -3064,25 +3085,26 @@ AI가 실행을 맡으면, 판단의 질이 곧 결과물의 질이에요.
 <div class="slide ai-center slide-pad" id="s-tip5">
 <div class="two-col mw-content">
 <div class="left">
-<div class="eyebrow anim">팁 5 / 12</div>
+<div class="eyebrow anim">팁 5 / 8</div>
 <div class="anim row ai-center g-18 mb-16">
 <div class="tip-badge">5</div>
-<h2 class="fs-display fw-800 fg-ink kw ls-tight2">자주 쓰는 화면<br/>베이스 파일로<br/>만들어두기</h2>
+<h2 class="fs-display fw-800 fg-ink kw ls-tight2">초안 기반<br/>역질문 프로세스</h2>
 </div>
 <div class="key-line anim">
-          새 POC = 파일 복사 + 기능만 추가.<br/>매번 제로베이스가 아니에요
+          완벽한 첫 프롬프트는 없어요.<br/>뼈대만 주고 역질문을 받으세요
         </div>
-<p class="lead anim fs-lead mt-16">자주 쓰는 UI 패턴을 미리 저장해두면, 새 POC를 시작할 때마다 시간을 크게 아낄 수 있어요.</p>
+<p class="lead anim fs-lead mt-16">첫 프롬프트에 모든 예외를 다 담으려 애쓰지 마세요. 뼈대만 주고 AI가 되묻게 하는 게 더 빨라요.</p>
 </div>
-<div class="row stack g-20">
+<div class="row stack g-16">
 <div class="card anim bg-warn bc-orange">
-<div class="card-title">방법</div>
-<p>Chat 화면, 리스트 화면 등 자주 쓰는 UI 패턴을 HTML 파일로 만들어둬요. 새 POC는 파일 복사 → 기능만 추가. 처음부터 다시 만드는 시간이 없어요.</p>
+<div class="card-title">지침</div>
+<p>첫 프롬프트엔 대략적 뼈대만 전달하고, AI가 먼저 <span class="em">역질문</span>하도록 유도해요.</p>
 </div>
 <div class="card anim">
-<div class="card-title">주의사항</div>
-<p>베이스 파일은 반드시 GitHub에 저장해두세요. 로컬만 있으면 Claude Code가 폴더 정리할 때 사라질 수 있어요.</p>
+<div class="card-title">목적</div>
+<p>프롬프트 작성의 인지 부하를 줄이고, 피드백으로 AI와의 싱크를 빠르게 맞춰요.</p>
 </div>
+<div class="anim bg-surface2 bd r-8 italic fg-dim kw lh-15 pad-12-16 fs-body-sm"><span class="fw-700 fg-orange">프롬프트 예시</span><br/>"바로 코드 짜지 말고 최소 초안 구조를 먼저 제안해. 그리고 완성을 위해 확인할 질문을 3개 이내로 뽑아줘."</div>
 </div>
 </div>
 </div>
@@ -3091,108 +3113,38 @@ AI가 실행을 맡으면, 판단의 질이 곧 결과물의 질이에요.
 <div class="slide ai-center slide-pad" id="s-tip6">
 <div class="two-col mw-content">
 <div class="left">
-<div class="eyebrow anim">팁 6 / 12</div>
+<div class="eyebrow anim">팁 6 / 8</div>
 <div class="anim row ai-center g-18 mb-16">
 <div class="tip-badge">6</div>
-<h2 class="fs-display fw-800 fg-ink kw ls-tight2">POC 범위<br/>명확히 하기</h2>
+<h2 class="fs-display fw-800 fg-ink kw ls-tight2">기술 스택 제약 ·<br/>명명 규칙</h2>
 </div>
 <div class="key-line anim">
-          문제는 개발자의 <strong>착각</strong>이에요.<br/>더미라는 걸 <span class="highlight">명확히 표시</span>하지 않으면 그대로 구현돼요.
+          '작동만 되는' 스파게티 코드는<br/>결국 기술 부채예요
         </div>
-<p class="lead anim fs-lead mt-16">
-          "이거 실제 API 연결된 거죠?"의 문제가 아니에요. 더미데이터를 실제 데이터로 착각해서 그대로 구현해버리는 게 문제예요.
-        </p>
+<p class="lead anim fs-lead mt-16">위임 전에 제약을 안 걸면, 당장은 돌아가도 나중에 손 못 대는 코드가 쌓여요.</p>
 </div>
-<div class="row stack g-20">
-<div class="card anim bg-bad-soft" style="border-color:#fecaca;">
-<div class="card-title fg-bad">진짜 문제</div>
-<p>실제 서비스랑 구분을 못 하는 게 문제가 아니에요. <strong>개발자의 착각</strong>이 문제예요. POC에 넣은 더미 값·샘플 텍스트를 실제 스펙으로 착각하고 그대로 구현해버리는 거예요.</p>
-</div>
+<div class="row stack g-16">
 <div class="card anim bg-warn bc-orange">
-<div class="card-title">선제적 대응</div>
-<p>POC 공유 전 반드시 <span class="em">"이 값·텍스트는 더미예요"</span>를 화면과 문서 양쪽에 명시하세요. 화면 상단 "POC — 더미데이터" 배지, 더미인 필드엔 별도 표식을 달아두세요.</p>
-</div>
-</div>
-</div>
-</div>
-
-
-<div class="slide p-0" id="s-tip-g-design">
-<svg class="w-full pos-abs inset-0 h-full pe-none" aria-hidden="true" preserveAspectRatio="xMidYMid slice" style="opacity:0.05;" viewBox="0 0 1200 700">
-<circle cx="600" cy="350" fill="none" r="260" stroke="#c96500" stroke-dasharray="6 5" stroke-width="1.5"></circle>
-</svg>
-<div class="row stack ai-center jc-center t-center g-12 pos-abs inset-0">
-<div class="eyebrow anim">팁 카테고리 3 / 4</div>
-<h2 class="anim ls-tight3 fs-hero lh-11">디자인</h2>
-<div class="anim r-pill h-2px bg-border2" style="width:48px;"></div>
-<p class="lead anim t-center fs-title m-0-auto" style="max-width:560px;">AI가 잘하는 영역과 못하는 영역을 가르는 법이에요.</p>
-</div>
-</div>
-
-
-<div class="slide ai-center slide-pad" id="s-tip3">
-<div class="two-col mw-content">
-<div class="left">
-<div class="eyebrow anim">팁 3 / 12</div>
-<div class="anim row ai-center g-18 mb-16">
-<div class="tip-badge">3</div>
-<h2 class="fs-display fw-800 fg-ink kw ls-tight2">Figma SVG<br/>첨부하기</h2>
-</div>
-<div class="key-line anim">
-          이미지 → SVG 첨부만 해도<br/>재수정 횟수가 절반으로 줄어요
-        </div>
-<p class="lead anim fs-lead mt-16">Figma Make가 어렵거나 시간이 없을 때, SVG 첨부만으로도 Claude가 화면 구조를 정확하게 파악해요.</p>
-</div>
-<div class="row stack g-20">
-<div class="anim g-12 ai-center grid grid-vs">
-<div class="bg-surface2 t-center r-12 bd" style="padding:22px;">
-<div class="fs-body-sm fw-700 fg-dimmer mb-8">이미지만 첨부</div>
-<div class="fg-dimmer fs-body" style="line-height:1.92;">레이아웃·간격<br/>잘못 해석<br/>재수정 반복</div>
-</div>
-<div class="t-center fg-orange fs-title-sm">→</div>
-<div class="bg-warn t-center r-12 bd-15-orange" style="padding:22px;">
-<div class="fs-body-sm fw-700 fg-orange mb-8">SVG 첨부</div>
-<div class="fg-dim fs-body" style="line-height:1.92;">구조·간격·텍스트<br/>정확하게 파악<br/>한 번에 결과</div>
-</div>
-</div>
-<div class="card anim bg-warn bc-orange">
-<div class="card-title">Figma에서 SVG 내보내기</div>
-<p>레이어 우클릭 → Copy as SVG → Claude에 붙여넣기. <strong>30초면 돼요.</strong></p>
-</div>
-</div>
-</div>
-</div>
-
-
-<div class="slide ai-center slide-pad" id="s-tip9">
-<div class="two-col mw-content">
-<div class="left">
-<div class="eyebrow anim">팁 9 / 12</div>
-<div class="anim row ai-center g-18 mb-16">
-<div class="tip-badge">9</div>
-<h2 class="fs-display fw-800 fg-ink kw ls-tight2">POC에<br/>상태창 만들기</h2>
-</div>
-<div class="key-line anim">
-          클릭 한 번으로 엣지 케이스 시연.<br/>말로 설명하는 것보다 10배 빨라요
-        </div>
-<p class="lead anim fs-lead mt-16">
-          로딩, 에러, 빈 화면 — 이 상태들을 POC 안에서 바로 보여줄 수 있으면, 개발자와의 리뷰가 완전히 달라져요.
-        </p>
-</div>
-<div class="row stack g-20">
-<div class="card anim bg-warn bc-orange">
-<div class="card-title">상태창에 넣을 것들</div>
-<ul class="list mt-8">
-<li class="fs-body pad-8-0"><span class="dot"></span><span>로딩 / 빈 화면 / 에러 / 성공 상태 전환</span></li>
-<li class="fs-body pad-8-0"><span class="dot"></span><span>디바이스 변환 (모바일/태블릿/데스크탑)</span></li>
-<li class="fs-body pad-8-0" style="border-bottom:none;"><span class="dot"></span><span>새로고침, 경로 파일 표시</span></li>
-</ul>
+<div class="card-title">지침</div>
+<p>위임 전, 사내 프레임워크 버전·컴포넌트 설계 원칙·명명 규칙(<span class="em">Semantic Naming</span>)을 시스템 제약으로 주입해요.</p>
 </div>
 <div class="card anim">
-<div class="card-title">상태창이 필요한 이유</div>
-<p class="kw">"이 상태에서는 이렇게 돼요"를 클릭 한 번으로 보여줄 수 있어요. 말로 설명하는 것보다 <strong>10배</strong> 빠르게 이해시켜요.</p>
+<div class="card-title">목적</div>
+<p>겨우 작동하는 스파게티 코드 생성을 막고 기술 부채를 예방해요.</p>
+</div>
+<div class="anim bg-surface2 bd r-8 italic fg-dim kw lh-15 pad-12-16 fs-body-sm"><span class="fw-700 fg-orange">프롬프트 예시</span><br/>"모든 컴포넌트는 함수형으로, 파일명은 PascalCase. 스타일은 Tailwind만 쓰고 인라인 스타일은 금지."</div>
 </div>
 </div>
+</div>
+
+
+<div class="slide p-0" id="s-tip-g-tools">
+<svg class="w-full pos-abs inset-0 h-full pe-none" aria-hidden="true" preserveAspectRatio="xMidYMid slice" style="opacity:0.05;" viewBox="0 0 1200 700"><circle cx="600" cy="350" fill="none" r="260" stroke="#c96500" stroke-dasharray="6 5" stroke-width="1.5"></circle></svg>
+<div class="row stack ai-center jc-center t-center g-12 pos-abs inset-0">
+<div class="eyebrow anim">팁 카테고리 4 / 4</div>
+<h2 class="anim ls-tight3 fs-hero lh-11">검증 · 운영</h2>
+<div class="anim r-pill h-2px bg-border2" style="width:48px;"></div>
+<p class="lead anim t-center fs-title m-0-auto" style="max-width:560px;">교차 검증하고, 프로토타입으로 협업해요.</p>
 </div>
 </div>
 
@@ -3200,50 +3152,27 @@ AI가 실행을 맡으면, 판단의 질이 곧 결과물의 질이에요.
 <div class="slide ai-center slide-pad" id="s-tip7">
 <div class="two-col mw-content">
 <div class="left">
-<div class="eyebrow anim">팁 7 / 12</div>
+<div class="eyebrow anim">팁 7 / 8</div>
 <div class="anim row ai-center g-18 mb-16">
 <div class="tip-badge">7</div>
-<h2 class="fs-display fw-800 fg-ink kw ls-tight2">AI 디자인 감각 한계 +<br/>목줄 전략</h2>
+<h2 class="fs-display fw-800 fg-ink kw ls-tight2">다중 모델<br/>교차 검증</h2>
 </div>
 <div class="key-line anim">
-          초반엔 느슨하게, 갈수록 타이트하게.<br/>명령 단위를 점점 세분화하세요
+          다른 모델에 Diff·부작용 요약을 시켜<br/>교차 검증해요
         </div>
-<p class="lead anim fs-lead mt-16">
-          AI는 기능을 만들 수 있지만, <span class="highlight">"AI스러운 디자인"</span>을 해결하기 위해서는 디자인 감각 있는 사람이 목줄을 잡아줘야 해요.
-        </p>
+<p class="lead anim fs-lead mt-16">전수 검사의 피로를 줄이면서, 비전문가도 안전하게 검증할 수 있게 해주는 방법이에요.</p>
 </div>
-<div class="row stack g-20">
-<div class="card anim bg-surface2">
-<div class="card-title">AI의 한계</div>
-<p>자연스러운 시각 보정, 호흡감, 여백의 감각이 없어요. 기능은 만들어도 "왜인지 어색함"은 못 잡아요. 그게 디자이너의 역할이에요.</p>
-</div>
+<div class="row stack g-16">
 <div class="card anim bg-warn bc-orange">
-<div class="card-title">목줄 전략</div>
-<div class="g-10 mt-10 grid grid-2">
-<div class="bg-surface r-8 bd" style="padding:14px;">
-<div class="fs-body fw-700 fg-dimmer mb-6">초반 — 느슨하게</div>
-<div class="fg-dim fs-body" style="line-height:1.92;">오픈된 요청<br/>아이디에이션<br/>"자유롭게 만들어봐"</div>
+<div class="card-title">지침</div>
+<p>주 에이전트가 만든 코드를 다른 추론 모델에 넣어 검증 리포트를 받고, <span class="em">변경점(Diff)·부작용 요약</span>을 강제해요.</p>
 </div>
-<div class="bg-warn r-8 bd-orange" style="padding:14px;">
-<div class="fs-body fw-700 fg-orange mb-6">갈수록 — 타이트하게</div>
-<div class="fg-ink fs-body" style="line-height:1.92;">텍스트 컬러 하나<br/>간격 1px씩<br/>명령 단위 세분화</div>
+<div class="card anim">
+<div class="card-title">목적</div>
+<p>전수 검사 피로를 줄이고, 비전문가의 검증 리스크를 최소화해요.</p>
 </div>
+<div class="anim bg-surface2 bd r-8 italic fg-dim kw lh-15 pad-12-16 fs-body-sm"><span class="fw-700 fg-orange">프롬프트 예시</span><br/>"이 코드의 변경(Diff)을 요약하고, 전역 상태에 영향 줄 잠재 부작용 3가지와 보안 관점 리팩토링 포인트를 제안해."</div>
 </div>
-</div>
-</div>
-</div>
-</div>
-
-
-<div class="slide p-0" id="s-tip-g-tools">
-<svg class="w-full pos-abs inset-0 h-full pe-none" aria-hidden="true" preserveAspectRatio="xMidYMid slice" style="opacity:0.05;" viewBox="0 0 1200 700">
-<circle cx="600" cy="350" fill="none" r="260" stroke="#c96500" stroke-dasharray="6 5" stroke-width="1.5"></circle>
-</svg>
-<div class="row stack ai-center jc-center t-center g-12 pos-abs inset-0">
-<div class="eyebrow anim">팁 카테고리 4 / 4</div>
-<h2 class="anim ls-tight3 fs-hero lh-11">효율 · 자동화</h2>
-<div class="anim r-pill h-2px bg-border2" style="width:48px;"></div>
-<p class="lead anim t-center fs-title m-0-auto" style="max-width:560px;">토큰·시간을 절약하는 실전 노하우예요.</p>
 </div>
 </div>
 
@@ -3251,133 +3180,26 @@ AI가 실행을 맡으면, 판단의 질이 곧 결과물의 질이에요.
 <div class="slide ai-center slide-pad" id="s-tip8">
 <div class="two-col mw-content">
 <div class="left">
-<div class="eyebrow anim">팁 8 / 12</div>
+<div class="eyebrow anim">팁 8 / 8</div>
 <div class="anim row ai-center g-18 mb-16">
 <div class="tip-badge">8</div>
-<h2 class="fs-display fw-800 fg-ink kw ls-tight2">수정사항 묶어서<br/>단계별 처리</h2>
+<h2 class="fs-display fw-800 fg-ink kw ls-tight2">프로토타입은<br/>'작동하는 명세서'</h2>
 </div>
 <div class="key-line anim">
-          "3단계 계획 세워서 처리해줘"<br/>= 누락 없이 토큰도 절약
+          AI 산출물은 완성본이 아니라<br/>타 직군과 맞추는 소통 매개체예요
         </div>
-<p class="lead anim fs-lead mt-16">수정사항을 하나씩 요청하면 비효율적이고, 한꺼번에 다 던지면 누락이 생겨요.</p>
-</div>
-<div class="row stack g-20">
-<div class="card anim" style="border-left:4px solid var(--red);">
-<div class="card-title fg-bad">하나씩 요청 (비효율)</div>
-<p>요청을 하나씩 던지면, 코드를 그때마다 다시 읽어요. 토큰도 낭비고, 시간도 낭비예요.</p>
-</div>
-<div class="card anim bg-warn bc-orange bd-l-orange">
-<div class="card-title">정답: 묶어서 단계별 계획</div>
-<p class="kw">10개 주고 <span class="em">"3단계 계획 세워서 처리해줘"</span>라고 하면 코드 1번 읽고 3/3/4 단계로 나눠서 처리해요. 누락 없이 효율적이에요.</p>
-</div>
-</div>
-</div>
-</div>
-
-
-<div class="slide ai-center slide-pad" id="s-tip10">
-<div class="two-col mw-content">
-<div class="left">
-<div class="eyebrow anim">팁 10 / 12</div>
-<div class="anim row ai-center g-18 mb-16">
-<div class="tip-badge">10</div>
-<h2 class="fs-display fw-800 fg-ink kw ls-tight2">Claude Code +<br/>Gemini 조합</h2>
-</div>
-<div class="key-line anim">
-          토큰 10번 → 1번으로.<br/>비용 절감 + 속도 향상
-        </div>
-<p class="lead anim fs-lead mt-16">
-          Claude Code와 Gemini를 상황에 맞게 나눠 쓰면, 비용을 줄이면서도 품질은 유지할 수 있어요.
-        </p>
+<p class="lead anim fs-lead mt-16">AI 산출물을 최종본으로 강요하지 말고, 말과 정적 기획서의 한계를 넘는 '실행되는 명세서'로 쓰세요.</p>
 </div>
 <div class="row stack g-16">
-<div class="card anim bg-warn bc-orange pad-18-22">
-<div class="card-title">대규모 수정 — Claude Code</div>
-<p>전체 맥락 파악, 구조 변경, 리팩토링에 강해요.</p>
-</div>
-<div class="card anim pad-18-22">
-<div class="card-title">세부 수정 — Gemini</div>
-<p>코드를 붙여넣고 핀포인트로 고쳐요. Claude 토큰 절약 + 더 빠른 수정.</p>
-</div>
-<div class="card anim bd-l-orange pad-18-22">
-<div class="card-title fg-orange">막히거나 토큰 소진 시</div>
-<p>Gemini에 문제를 주고 <span class="em">Claude Code용 프롬프트</span>를 만들게 해요. GitHub를 AI Studio에 연결해두면 이어서 작업할 수 있어요.</p>
-</div>
-</div>
-</div>
-</div>
-
-
-<div class="slide ai-center slide-pad" id="s-tip11">
-<div class="two-col mw-content">
-<div class="left">
-<div class="eyebrow anim">팁 11 / 12</div>
-<div class="anim row ai-center g-18 mb-16">
-<div class="tip-badge">11</div>
-<h2 class="fs-display fw-800 fg-ink kw ls-tight2">GitHub + Vercel<br/>배포 자동화</h2>
-</div>
-<div class="key-line anim">
-          POC 완성 → 자동 배포 → 링크 공유.<br/>전부 자동이에요
-        </div>
-<p class="lead anim fs-lead mt-16">
-          POC 코드를 로컬에만 두면 언제든 사라질 수 있어요.
-        </p>
-</div>
-<div class="row stack g-20">
-<div class="card anim bg-bad-soft" style="border-color:#fecaca;">
-<div class="card-title fg-bad">로컬만 쓰면 생기는 문제</div>
-<p>Claude Code가 폴더 정리할 때 삭제될 수 있어요. 며칠 걸쳐 만든 POC가 사라지는 걸 직접 경험했어요.</p>
-</div>
 <div class="card anim bg-warn bc-orange">
-<div class="card-title">GitHub + Vercel 세트</div>
-<p>POC 완성 → GitHub 푸시 → Vercel 자동 배포 → 링크 공유. 초기 설정도 Claude Code에 "설정해줘" 하면 알아서 다 해줘요.</p>
+<div class="card-title">지침</div>
+<p>AI 산출물을 최종본으로 강요하지 말고, 타 직군과 프로덕션 스펙을 맞추는 <span class="em">'작동하는 실행 명세서'</span>로 활용해요.</p>
 </div>
+<div class="card anim">
+<div class="card-title">목적</div>
+<p>타 직군의 전문성을 존중하며 부서 간 소통 비용을 줄여요.</p>
 </div>
-</div>
-</div>
-
-
-<div class="slide ai-center slide-pad" id="s-tip12">
-<div class="two-col mw-content">
-<div class="left">
-<div class="eyebrow anim">팁 12 / 12</div>
-<div class="anim row ai-center g-18 mb-16">
-<div class="tip-badge">12</div>
-<h2 class="fs-display fw-800 fg-ink kw ls-tight2">POC 만들고<br/>QA 루프 돌리기</h2>
-</div>
-<div class="key-line anim">
-          98점 될 때까지 반복.<br/>마지막은 사람이 검수해요
-        </div>
-<p class="lead anim fs-lead mt-16">
-          만들고 끝이 아니라, 에이전트 여러 개를 돌려 서로 검토하게 하면 품질이 다른 수준으로 올라가요.
-        </p>
-</div>
-<div class="row stack g-10">
-<div class="anim bg-surface row ai-start g-12 r-8 bd pad-12-16">
-<div class="fg-white fs-body fw-700 row ai-center jc-center r-full bg-orange flex-shrink-0 sq-24" style="margin-top:2px;">1</div>
-<div>
-<div class="fw-700 fg-ink fs-body mb-2">읽고 계획 세우기</div>
-<div class="fg-dim fs-body" style="line-height:1.86;">POC 구조와 요구사항 파악 → 개선 계획 수립</div>
-</div>
-</div>
-<div class="anim bg-surface row ai-start g-12 r-8 bd pad-12-16">
-<div class="fg-white fs-body fw-700 row ai-center jc-center r-full bg-orange flex-shrink-0 sq-24" style="margin-top:2px;">2</div>
-<div>
-<div class="fw-700 fg-ink fs-body mb-2">계획에 따라 구현·작성</div>
-<div class="fg-dim fs-body" style="line-height:1.86;">에이전트 1의 계획대로 실제 구현 진행</div>
-</div>
-</div>
-<div class="anim bg-warn row ai-start g-12 r-8 bd-orange pad-12-16">
-<div class="fg-white fs-body fw-700 row ai-center jc-center r-full bg-orange flex-shrink-0 sq-24" style="margin-top:2px;">3</div>
-<div>
-<div class="fw-700 fg-ink fs-body mb-2">에이전트 3·4·5 — 냉정한 평가</div>
-<div class="fg-dim fs-body" style="line-height:1.86;">새로운 관점으로 구멍 찾기 → 다수의 에이전트로 피드백 전달</div>
-</div>
-</div>
-<div class="anim row ai-center g-10 bg-surface2 r-8 bd pad-10-16">
-<div class="fg-orange fs-title-sm">↺</div>
-<div class="fs-body fg-dim">다수 에이전트로 피드백 전달 → 루프 반복 → 평균 <span class="fg-ink fw-700">98점</span> 달성<br/><span class="fs-body fg-dimmer">* Claude Code 창을 여러 개 띄워서 역할을 나눠요</span></div>
-</div>
+<div class="anim bg-surface2 bd r-8 italic fg-dim kw lh-15 pad-12-16 fs-body-sm"><span class="fw-700 fg-orange">핸드오프 예시</span><br/>"기획 의도와 핵심 유저 저니를 맞추려 작동하는 프로토타입을 구현했어요. 이 구조 기반으로 아키텍처 검증 후 프로덕션 리팩토링을 부탁드려요."</div>
 </div>
 </div>
 </div>
