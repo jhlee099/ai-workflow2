@@ -1063,25 +1063,28 @@
     bottom: 28px;
     left: 50%;
     transform: translateX(-50%) translateY(8px);
-    background: rgba(20, 18, 14, 0.92);
+    background: rgba(20, 18, 14, 0.6);
     color: #f0ede6;
-    padding: 11px 22px;
+    padding: 9px 18px;
     border-radius: 99px;
-    font-size: 14px;
-    font-weight: 600;
-    letter-spacing: 0.04em;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0.02em;
     z-index: 10002;
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.4s ease, transform 0.4s ease;
     white-space: nowrap;
-    backdrop-filter: blur(6px);
-    box-shadow: 0 6px 24px rgba(0,0,0,0.18);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 3px 12px rgba(0,0,0,0.1);
   }
   .nav-hint.visible {
-    opacity: 1;
+    opacity: 0.85;
     transform: translateX(-50%) translateY(0);
   }
+  /* 세로(회전) 화면에선 힌트도 콘텐츠와 같이 90° 회전 */
+  .nav-hint.rot { transform: translateX(-50%) translateY(8px) rotate(90deg); }
+  .nav-hint.rot.visible { transform: translateX(-50%) translateY(0) rotate(90deg); }
   .nav-hint .nh-key {
     background: rgba(255,255,255,0.18);
     padding: 2px 8px;
@@ -3318,6 +3321,8 @@ AI가 실행을 맡으면, 판단의 질이 곧 결과물의 질이에요.
     deck.style.transform = 'translate(-50%, -50%) scale(' + scale + ')' + rot;
     slideNumEl.style.fontSize = Math.round(11 * scale) + 'px';
     deck.style.visibility = 'visible'; // 스케일 적용 후 노출
+    const nh = document.querySelector('.nav-hint'); // 힌트도 콘텐츠와 같은 회전 상태로
+    if (nh) nh.classList.toggle('rot', deckRotated);
   }
   fitDeck();
   let _resizeTimer;
@@ -3456,6 +3461,7 @@ AI가 실행을 맡으면, 판단의 질이 곧 결과물의 질이에요.
     const swipe = '👆 <b>스와이프</b>';
     const keys = '<span class="nh-key">←</span><span class="nh-key">→</span> <b>키</b>';
     hint.innerHTML = (isTouch ? swipe + ' 또는 ' + keys : keys + ' 또는 ' + swipe) + '로 넘기세요';
+    if (deckRotated) hint.classList.add('rot'); // 세로면 콘텐츠와 같이 회전
     document.body.appendChild(hint);
     setTimeout(() => hint.classList.add('visible'), 400);
     let removed = false;
